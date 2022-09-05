@@ -1,3 +1,3 @@
 export default function Landing() {
-    return <>the landing page</>;
+    return <>the best landing page</>;
 }
