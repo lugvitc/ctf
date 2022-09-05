@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
-import TerminalWindow from '../../../../components/terminal/terminalWindow';
 import styles from './ChallengeModal.module.css';
-import useFetch from '../../../hooks/useFetch';
+import useFetch from '../../hooks/useFetch';
 import ReactMarkdown from 'react-markdown';
 
 function ChallengeModal({
@@ -64,10 +63,7 @@ function ChallengeModal({
 
     return (
         <dialog ref={modalRef} open={false} className={styles.modal}>
-            <TerminalWindow
-                title={challenge.name}
-                onClickRed={closeQuestionModal}
-            >
+            <>
                 {isSolved && 'done'}
                 <div className={styles.header}>
                     <h2>Challenge {challenge.name}</h2>
@@ -96,7 +92,7 @@ function ChallengeModal({
                     className={styles.valid}
                 />
                 <button onClick={submitFlag}>Submit</button>
-            </TerminalWindow>
+            </>
         </dialog>
     );
 }

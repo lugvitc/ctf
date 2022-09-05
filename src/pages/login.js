@@ -27,7 +27,7 @@ export default function Login() {
                 const data = await res.json();
                 window.localStorage.setItem('access-token', data.access_token);
                 await fetchTeam();
-                navigate('/rescue-tux/play');
+                navigate('/play');
             } else {
                 window.alert('There was an error');
             }
@@ -69,3 +69,4 @@ export default function Login() {
         </>
     );
 }
+
