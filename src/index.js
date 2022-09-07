@@ -15,7 +15,7 @@ import LoggedInRoute from './components/loggedInRoute';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
     <React.StrictMode>
-        <HashRouter basename={process.env.PUBLIC_URL}>
+        <HashRouter>
             <Routes>
                 <Route path='/' element={<App />}>
                     <Route index element={<Landing />} />
