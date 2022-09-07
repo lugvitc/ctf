@@ -1,8 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
 import { HashRouter, Routes, Route, Outlet } from 'react-router-dom';
+
+import './styles/index.css';
+import './styles/colors.css';
+
+import App from './App';
 
 import Landing from './pages/landing';
 import Register from './pages/register';
