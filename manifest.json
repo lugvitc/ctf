@@ -1,8 +1,7 @@
 {
-    "short_name": "ctf",
-    "name": "Capture the Flag Platform by LUG",
-    "icons": [],
-    "start_url": ".",
+    "short_name": "lugvitc",
+    "name": "Linux Club",
+    "start_url": "./index.html",
     "display": "standalone",
     "theme_color": "#000000",
     "background_color": "#ffffff"
