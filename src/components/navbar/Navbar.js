@@ -18,7 +18,7 @@ export default function Navbar() {
                     <NavLink to='/play'>Play</NavLink>
                 </li>
                 <li>
-                    <NavLink to='/play/leaderboard'>Leaderboard</NavLink>
+                    <NavLink to='/leaderboard'>Leaderboard</NavLink>
                 </li>
             </ul>
         </nav>

@@ -11,7 +11,7 @@ import Landing from './pages/landing';
 import Register from './pages/register';
 import Login from './pages/login';
 import Play from './pages/play/play';
-import Leaderboard from './pages/play/leaderboard';
+import Leaderboard from './pages/leaderboard';
 
 import LoggedInRoute from './components/loggedInRoute';
 
@@ -24,20 +24,13 @@ root.render(
                     <Route index element={<Landing />} />
                     <Route path='/register' element={<Register />} />
                     <Route path='/login' element={<Login />} />
-                    <Route
-                        path='/play'
-                        element={
-                            <LoggedInRoute>
-                                <Outlet />
-                            </LoggedInRoute>
-                        }
-                    >
-                        <Route index element={<Play />} />
+                    
+                        <Route path='/play' element={<LoggedInRoute><Play /></LoggedInRoute>} />
                         <Route
-                            path='/play/leaderboard'
-                            element={<Leaderboard />}
+                            path='/leaderboard'
+                            element={<LoggedInRoute><Leaderboard /></LoggedInRoute>}
                         />
-                    </Route>
+                    
                 </Route>
             </Routes>
         </HashRouter>

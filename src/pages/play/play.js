@@ -49,7 +49,7 @@ export default function Play() {
                 )}
                 <button onClick={logoutTeam}>Logout</button>
                 <button>
-                    <NavLink to='/play/leaderboard'>Leaderboard</NavLink>
+                    <NavLink to='/leaderboard'>Leaderboard</NavLink>
                 </button>
             </section>
 

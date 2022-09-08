@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { NavLink } from 'react-router-dom';
-import useFetch from '../../hooks/useFetch';
-import LeaderboardCards from '../../components/leaderboardCard/leaderboardCards';
+import useFetch from '../hooks/useFetch';
+import LeaderboardCards from '../components/leaderboardCard/leaderboardCards';
 
 export default function Leaderboard() {
     const [teams, setTeams] = useState(null);
@@ -19,7 +19,7 @@ export default function Leaderboard() {
     return (
         <>
             <button>
-                <NavLink to='/rescue-tux/play'>Back</NavLink>
+                <NavLink to='/play'>Back</NavLink>
             </button>
             <br />
             {teams ? (
