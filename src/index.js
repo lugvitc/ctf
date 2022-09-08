@@ -24,13 +24,22 @@ root.render(
                     <Route index element={<Landing />} />
                     <Route path='/register' element={<Register />} />
                     <Route path='/login' element={<Login />} />
-                    
-                        <Route path='/play' element={<LoggedInRoute><Play /></LoggedInRoute>} />
-                        <Route
-                            path='/leaderboard'
-                            element={<LoggedInRoute><Leaderboard /></LoggedInRoute>}
-                        />
-                    
+                    <Route
+                        path='/play'
+                        element={
+                            <LoggedInRoute>
+                                <Play />
+                            </LoggedInRoute>
+                        }
+                    />
+                    <Route
+                        path='/leaderboard'
+                        element={
+                            <LoggedInRoute>
+                                <Leaderboard />
+                            </LoggedInRoute>
+                        }
+                    />
                 </Route>
             </Routes>
         </HashRouter>
