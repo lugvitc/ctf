@@ -13,6 +13,7 @@ div#root {
 
 nav {
     position: sticky;
+    top: 0;
     flex: 0;
 }
 
