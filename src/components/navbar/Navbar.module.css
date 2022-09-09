@@ -1,6 +1,5 @@
 .all {
     background-color: var(--header-footer-black);
-    color: var(--nord5);
 
     display: flex;
     flex-direction: row;
