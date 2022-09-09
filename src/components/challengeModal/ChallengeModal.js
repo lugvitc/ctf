@@ -65,9 +65,16 @@ function ChallengeModal({
         <dialog ref={modalRef} open={false} className={styles.modal}>
             <>
                 {isSolved && 'done'}
+                <div className={styles.close} onClick={closeQuestionModal}>
+                    X
+                </div>
                 <div className={styles.header}>
-                    <h2>Challenge {challenge.name}</h2>
-                    <p>{challenge.points} points</p>
+                    <div className={styles.name}>
+                        Challenge {challenge.name}
+                    </div>
+                    <div className={styles.points}>
+                        {challenge.points} points
+                    </div>
                 </div>
                 <div className={styles.grid}>
                     <div className={styles.description}>

@@ -3,7 +3,7 @@
     border: none;
     background-color: var(--nord1);
     margin: 0;
-    padding: 1rem;
+    padding: 2rem 1rem;
 
     color: var(--nord5);
 
@@ -22,5 +22,33 @@
 
 .description {
     word-wrap: break-word;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+}
+
+.name {
+    font-size: x-large;
+    font-weight: bold;
+}
+
+.points {
+    font-size: large;
+    color: var(--nord12);
+
+    padding-left: 1rem;
+    margin-left: 1rem;
+    border-left: 2px solid var(--nord5);
+}
+
+.close {
+    margin-left: auto;
+    position: absolute;
+    right: 0.5rem;
+    top: 0.5rem;
+
+    cursor: pointer;
 }
 

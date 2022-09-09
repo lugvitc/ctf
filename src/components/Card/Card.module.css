@@ -10,6 +10,7 @@
     cursor: arrow;
     background-color: var(--nord14);
     color: var(--header-footer-black);
+    cursor: auto;
 }
 
 .header {
