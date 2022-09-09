@@ -9,6 +9,11 @@
     padding: 1rem 0.5rem;
 }
 
+.name {
+    padding: 1rem 0.5rem;
+    margin-left: auto;
+}
+
 .links {
     display: flex;
     flex-direction: row;
@@ -33,8 +38,3 @@
     border-bottom: 3px solid var(--nord12);
 }
 
-.team {
-}
-
-.login-button {
-}
