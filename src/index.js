@@ -12,6 +12,7 @@ import Register from './pages/register';
 import Login from './pages/login';
 import Play from './pages/play/play';
 import Leaderboard from './pages/leaderboard';
+import Team from './pages/team';
 
 import LoggedInRoute from './components/loggedInRoute';
 
@@ -37,6 +38,14 @@ root.render(
                         element={
                             <LoggedInRoute>
                                 <Leaderboard />
+                            </LoggedInRoute>
+                        }
+                    />
+                    <Route
+                        path='/team'
+                        element={
+                            <LoggedInRoute>
+                                <Team />
                             </LoggedInRoute>
                         }
                     />

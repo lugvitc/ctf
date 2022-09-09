@@ -29,30 +29,6 @@ export default function Play() {
 
     return (
         <>
-            <section id='team'>
-                {team ? (
-                    <>
-                        <h2>Team: {team.name}</h2>
-                        <ul>
-                            {team.members &&
-                                team.members.map(
-                                    m =>
-                                        m.regNo && (
-                                            <li key={m.regNo}>{m.regNo}</li>
-                                        )
-                                )}
-                        </ul>
-                        <div>{team.currentPoints || 0} points</div>
-                    </>
-                ) : (
-                    <>loading team data...</>
-                )}
-                <button onClick={logoutTeam}>Logout</button>
-                <button>
-                    <NavLink to='/leaderboard'>Leaderboard</NavLink>
-                </button>
-            </section>
-
             <section id='challenges'>
                 {challenges ? (
                     <>
@@ -79,3 +55,4 @@ export default function Play() {
         </>
     );
 }
+
