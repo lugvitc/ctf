@@ -18,10 +18,6 @@ export default function Leaderboard() {
 
     return (
         <>
-            <button>
-                <NavLink to='/play'>Back</NavLink>
-            </button>
-            <br />
             {teams ? (
                 teams.length > 0 ? (
                     <LeaderboardCards teams={teams} />
@@ -34,3 +30,4 @@ export default function Leaderboard() {
         </>
     );
 }
+
