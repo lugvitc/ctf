@@ -67,7 +67,7 @@ function ChallengeModal({
                 {isSolved && 'done'}
                 <div className={styles.header}>
                     <h2>Challenge {challenge.name}</h2>
-                    <p>Points | {challenge.points}</p>
+                    <p>{challenge.points} points</p>
                 </div>
                 <div className={styles.grid}>
                     <div className={styles.description}>

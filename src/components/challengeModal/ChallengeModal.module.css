@@ -1,9 +1,11 @@
 .modal {
     border-radius: 10px;
     border: none;
-    background-color: transparent;
+    background-color: var(--nord1);
     margin: 0;
-    padding: 0;
+    padding: 1rem;
+
+    color: var(--nord5);
 
     width: fit-content;
     max-width: 60vw;
