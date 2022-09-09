@@ -1,14 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
 import { HashRouter, Routes, Route, Outlet } from 'react-router-dom';
+
+import './styles/index.css';
+import './styles/colors.css';
+
+import App from './App';
 
 import Landing from './pages/landing';
 import Register from './pages/register';
 import Login from './pages/login';
 import Play from './pages/play/play';
-import Leaderboard from './pages/play/leaderboard';
+import Leaderboard from './pages/leaderboard';
+import Team from './pages/team';
 
 import LoggedInRoute from './components/loggedInRoute';
 
@@ -25,16 +29,26 @@ root.render(
                         path='/play'
                         element={
                             <LoggedInRoute>
-                                <Outlet />
+                                <Play />
                             </LoggedInRoute>
                         }
-                    >
-                        <Route index element={<Play />} />
-                        <Route
-                            path='/play/leaderboard'
-                            element={<Leaderboard />}
-                        />
-                    </Route>
+                    />
+                    <Route
+                        path='/leaderboard'
+                        element={
+                            <LoggedInRoute>
+                                <Leaderboard />
+                            </LoggedInRoute>
+                        }
+                    />
+                    <Route
+                        path='/team'
+                        element={
+                            <LoggedInRoute>
+                                <Team />
+                            </LoggedInRoute>
+                        }
+                    />
                 </Route>
             </Routes>
         </HashRouter>

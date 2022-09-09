@@ -1,0 +1,10 @@
+.all {
+    background-color: var(--header-footer-black);
+    padding-block: 1rem;
+    text-align: center;
+}
+
+.link {
+    color: var(--nord10);
+    cursor: pointer;
+}

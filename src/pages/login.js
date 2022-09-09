@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 import useFetch from '../hooks/useFetch';
 import useTeam from '../hooks/useTeam';
 
@@ -58,6 +58,10 @@ export default function Login() {
                         onChange={handleChange('password')}
                         value={loginValues.password}
                     />
+                </div>
+                <div className='form-filed'>
+                    New user?, <NavLink to='/register'>register</NavLink> now
+                    and start the challenge
                 </div>
 
                 <div className='form-end'>

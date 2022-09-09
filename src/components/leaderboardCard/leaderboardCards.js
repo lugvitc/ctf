@@ -1,7 +1,12 @@
 import styles from './leaderboardCards.module.css';
 
 export default function LeaderboardCards({ teams }) {
-    teams = teams.sort((a, b) => b.currentPoints - a.currentPoints);
+    teams = teams.sort((a, b) =>
+        a != b
+            ? b.currentPoints - a.currentPoints
+            : new Date(b.lastTimeStamp).getTime() -
+              new Date(a.lastTimeStamp).getTime()
+    );
 
     return (
         <div className={styles.cards}>
@@ -27,3 +32,4 @@ export default function LeaderboardCards({ teams }) {
         </div>
     );
 }
+
