@@ -54,7 +54,7 @@ export default function Navbar() {
                     }
                     to='/login'
                 >
-                    Login/Signup
+                    Login/Register
                 </NavLink>
             )}
         </nav>
