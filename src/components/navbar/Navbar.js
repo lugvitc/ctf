@@ -13,6 +13,10 @@ const links = [
 export default function Navbar() {
     const { team, logoutTeam } = useTeam();
 
+    const promptThenLogout = () => {
+        if (window.confirm(`Logging out as team ${team.name}`)) logoutTeam();
+    };
+
     return (
         <nav className={styles.all}>
             <div className={styles.logos}>LUG x TRC</div>
@@ -39,7 +43,7 @@ export default function Navbar() {
                     >
                         Team {team.name}: {team.currentPoints || 0} points
                     </NavLink>
-                    <div className={styles.link} onClick={logoutTeam}>
+                    <div className={styles.link} onClick={promptThenLogout}>
                         Logout
                     </div>
                 </>
