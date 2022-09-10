@@ -3,6 +3,8 @@ import styles from './ChallengeModal.module.css';
 import useFetch from '../../hooks/useFetch';
 import ReactMarkdown from 'react-markdown';
 
+import LoadingAnimation from '../loadingAnimation/loadingAnimation';
+
 function ChallengeModal({
     challenge,
     modalRef,
@@ -12,6 +14,7 @@ function ChallengeModal({
     qWasCorrect
 }) {
     const [inputValue, setInputValue] = useState('');
+    const [loading, setLoading] = useState(false);
 
     function inputChangeHandler(event) {
         setInputValue(event.target.value);
@@ -33,18 +36,19 @@ function ChallengeModal({
             challenge_id: challenge.id
         });
         try {
+            setLoading(true);
             const data = await res.json();
             if (data.valid) {
                 console.log('good!');
                 setQuestionModalOpen(false);
                 qWasCorrect();
             } else {
-                alert('error');
-                setQuestionModalOpen(false);
+                alert('invalid flag');
+                setLoading(false);
             }
         } catch {
             alert('error');
-            setQuestionModalOpen(false);
+            setLoading(false);
         }
     };
 
@@ -93,12 +97,18 @@ function ChallengeModal({
                         </ReactMarkdown>
                     </div>
                 </div>
-                <input
-                    value={inputValue}
-                    onChange={inputChangeHandler}
-                    className={styles.valid}
-                />
-                <button onClick={submitFlag}>Submit</button>
+                {loading ? (
+                    <LoadingAnimation />
+                ) : (
+                    <>
+                        <input
+                            value={inputValue}
+                            onChange={inputChangeHandler}
+                            className={styles.valid}
+                        />
+                        <button onClick={submitFlag}>Submit</button>
+                    </>
+                )}
             </>
         </dialog>
     );
