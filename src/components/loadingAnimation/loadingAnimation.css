@@ -1,0 +1,29 @@
+.loading-animation-container {
+    --size: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    width: 100%;
+}
+
+.loading-animation {
+    background: transparent;
+    fill: var(--nord5);
+    width: var(--size);
+    height: var(--size);
+    animation: spin 1s linear infinite;
+}
+
+main > .loading-animation-container {
+    margin-top: calc(var(--size) * 3);
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
