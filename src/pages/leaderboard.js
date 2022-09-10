@@ -3,6 +3,8 @@ import { NavLink } from 'react-router-dom';
 import useFetch from '../hooks/useFetch';
 import LeaderboardCards from '../components/leaderboardCard/leaderboardCards';
 
+import LoadingAnimation from '../components/loadingAnimation/loadingAnimation';
+
 export default function Leaderboard() {
     const [teams, setTeams] = useState(null);
     const { apiPostGetJsonAsTeam } = useFetch();
@@ -18,6 +20,7 @@ export default function Leaderboard() {
 
     return (
         <>
+            <h1>Leaderboard</h1>
             {teams ? (
                 teams.length > 0 ? (
                     <LeaderboardCards teams={teams} />
@@ -25,7 +28,7 @@ export default function Leaderboard() {
                     <>no teams have registered yet</>
                 )
             ) : (
-                <>loading...</>
+                <LoadingAnimation />
             )}
         </>
     );

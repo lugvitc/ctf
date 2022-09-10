@@ -6,6 +6,7 @@ import useTeam from '../../hooks/useTeam';
 import Card from '../../components/Card/Card';
 
 import styles from './play.module.css';
+import LoadingAnimation from '../../components/loadingAnimation/loadingAnimation';
 
 export default function Play() {
     const [challenges, setChallenges] = useState(null);
@@ -29,29 +30,23 @@ export default function Play() {
 
     return (
         <>
-            <section id='challenges'>
-                {challenges ? (
-                    <>
-                        <h2>Challenges</h2>
-                        <div className={styles.challenges}>
-                            {challenges.map(c => (
-                                <Card
-                                    key={c.id}
-                                    challenge={c}
-                                    isSolved={
-                                        team
-                                            ? c.solvedBy.includes(team.name)
-                                            : false
-                                    }
-                                    qWasCorrect={qWasCorrect}
-                                />
-                            ))}
-                        </div>
-                    </>
-                ) : (
-                    <>loading challenges...</>
-                )}
-            </section>
+            <h1>Play</h1>
+            {challenges ? (
+                <div className={styles.challenges}>
+                    {challenges.map(c => (
+                        <Card
+                            key={c.id}
+                            challenge={c}
+                            isSolved={
+                                team ? c.solvedBy.includes(team.name) : false
+                            }
+                            qWasCorrect={qWasCorrect}
+                        />
+                    ))}
+                </div>
+            ) : (
+                <LoadingAnimation />
+            )}
         </>
     );
 }

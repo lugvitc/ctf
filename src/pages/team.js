@@ -1,12 +1,14 @@
+import LoadingAnimation from '../components/loadingAnimation/loadingAnimation';
 import useTeam from '../hooks/useTeam';
 
 export default function Team() {
     const { team } = useTeam();
     return (
         <>
+            <h1>Your Team</h1>
             {team ? (
                 <>
-                    <h2>Team: {team.name}</h2>
+                    <h2>Team {team.name}</h2>
                     <ul>
                         {team.members &&
                             team.members.map(
@@ -16,8 +18,9 @@ export default function Team() {
                     <div>{team.currentPoints || 0} points</div>
                 </>
             ) : (
-                <>loading team data...</>
+                <LoadingAnimation />
             )}
         </>
     );
 }
+
