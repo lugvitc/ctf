@@ -1,4 +1,5 @@
 import styles from './leaderboardCards.module.css';
+import useTeam from '../../hooks/useTeam';
 
 export default function LeaderboardCards({ teams }) {
     teams = teams.sort((a, b) =>
@@ -8,10 +9,17 @@ export default function LeaderboardCards({ teams }) {
               new Date(a.lastTimeStamp).getTime()
     );
 
+    const { team } = useTeam();
+
     return (
         <div className={styles.cards}>
             {teams.map((t, index) => (
-                <div className={styles.card} key={t.name}>
+                <div
+                    className={`${styles.card} ${
+                        team ? (t.name == team.name ? styles.userTeam : '') : ''
+                    }`}
+                    key={t.name}
+                >
                     <div className={styles.position}>{index + 1}</div>
                     <div className={styles.teamData}>
                         <div>
