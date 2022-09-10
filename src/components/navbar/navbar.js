@@ -1,11 +1,9 @@
 import { NavLink } from 'react-router-dom';
 import useTeam from '../../hooks/useTeam';
-import styles from './Navbar.module.css';
+import styles from './navbar.module.css';
 
 const links = [
     { to: '/', text: 'Home' },
-    // { to: '/register', text: 'Register' },
-    // { to: '/login', text: 'Login' },
     { to: '/play', text: 'Play' },
     { to: '/leaderboard', text: 'Leaderboard' }
 ];
@@ -49,14 +47,24 @@ export default function Navbar() {
                     </div>
                 </>
             ) : (
-                <NavLink
-                    className={({ isActive }) =>
-                        `${styles.link} ${isActive ? styles.active : null}`
-                    }
-                    to='/login'
-                >
-                    Login/Register
-                </NavLink>
+                <>
+                    <NavLink
+                        className={({ isActive }) =>
+                            `${styles.link} ${isActive ? styles.active : null}`
+                        }
+                        to='/login'
+                    >
+                        Login
+                    </NavLink>
+                    <NavLink
+                        className={({ isActive }) =>
+                            `${styles.link} ${isActive ? styles.active : null}`
+                        }
+                        to='/Register'
+                    >
+                        Register
+                    </NavLink>
+                </>
             )}
         </nav>
     );

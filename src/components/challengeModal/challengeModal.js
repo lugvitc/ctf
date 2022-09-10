@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import styles from './ChallengeModal.module.css';
+import styles from './challengeModal.module.css';
 import useFetch from '../../hooks/useFetch';
 import ReactMarkdown from 'react-markdown';
 

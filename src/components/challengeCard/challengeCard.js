@@ -1,9 +1,9 @@
 import { useRef, useState } from 'react';
-import styles from './Card.module.css';
-import ChallengeModal from '../challengeModal/ChallengeModal';
+import styles from './challengeCard.module.css';
+import ChallengeModal from '../challengeModal/challengeModal';
 import ReactMarkdown from 'react-markdown';
 
-export default function Card({ challenge, isSolved, qWasCorrect }) {
+export default function ChallengeCard({ challenge, isSolved, qWasCorrect }) {
     const [questionModalOpen, setQuestionModalOpen] = useState(false);
     const modalRef = useRef(null);
 

@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 
 import useFetch from '../../hooks/useFetch';
 import useTeam from '../../hooks/useTeam';
-import Card from '../../components/Card/Card';
+import ChallengeCard from '../../components/challengeCard/challengeCard';
 
 import styles from './play.module.css';
 import LoadingAnimation from '../../components/loadingAnimation/loadingAnimation';
@@ -56,7 +56,7 @@ export default function Play() {
                                 : !c.solvedBy.includes(team.name)
                         )
                         .map(c => (
-                            <Card
+                            <ChallengeCard
                                 key={c.id}
                                 challenge={c}
                                 isSolved={
