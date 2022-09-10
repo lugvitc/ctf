@@ -8,7 +8,7 @@ import './styles/colors.css';
 import App from './App';
 
 import Landing from './pages/landing';
-import Register from './pages/register';
+import Signup from './pages/signup/signup';
 import Login from './pages/login';
 import Play from './pages/play/play';
 import Leaderboard from './pages/leaderboard';
@@ -23,7 +23,7 @@ root.render(
             <Routes>
                 <Route path='/' element={<App />}>
                     <Route index element={<Landing />} />
-                    <Route path='/register' element={<Register />} />
+                    <Route path='/signup' element={<Signup />} />
                     <Route path='/login' element={<Login />} />
                     <Route
                         path='/play'

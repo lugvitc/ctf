@@ -60,9 +60,9 @@ export default function Navbar() {
                         className={({ isActive }) =>
                             `${styles.link} ${isActive ? styles.active : null}`
                         }
-                        to='/register'
+                        to='/signup'
                     >
-                        Register
+                        Signup
                     </NavLink>
                 </>
             )}

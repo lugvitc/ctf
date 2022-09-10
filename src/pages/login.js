@@ -70,9 +70,8 @@ export default function Login() {
                             />
                         </div>
                         <div className='form-filed'>
-                            New user?,{' '}
-                            <NavLink to='/register'>register</NavLink> now and
-                            start the challenge
+                            New user?, <NavLink to='/signup'>register</NavLink>{' '}
+                            now and start the challenge
                         </div>
 
                         <div className='form-end'>

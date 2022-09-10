@@ -1,11 +1,11 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-import useFetch from '../hooks/useFetch';
+import useFetch from '../../hooks/useFetch';
 
-import styles from './register.module.css';
+import styles from './signup.module.css';
 
-export default function TeamRegistration() {
+export default function Signup() {
     const [teamValues, setTeamValues] = useState({
         name: '',
         member1RegNo: '',
@@ -176,3 +176,4 @@ export default function TeamRegistration() {
         </>
     );
 }
+
