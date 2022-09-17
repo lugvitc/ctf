@@ -6,6 +6,7 @@ body {
     min-height: 100vh;
     color: var(--nord5);
     font-family: 'Roboto Mono', monospace;
+    overflow-x: hidden;
 }
 
 div#root {
