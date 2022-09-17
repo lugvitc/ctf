@@ -29,7 +29,7 @@
 
 .title {
     margin-block: 0rem;
-    font-size: 10rem;
+    font-size: 8rem;
 }
 
 .infoCards {
@@ -42,19 +42,30 @@
 }
 
 .infoCards > * {
-    outline: red 2px solid;
-    padding: 3rem;
+    padding: 2rem;
+    flex: 1 1 0px;
+    display: grid;
+    place-items: center;
+}
+
+.infoCards > *:nth-child(2n + 1) {
+    background-color: var(--nord2);
+}
+
+.infoCards > *:nth-child(2n) {
+    background-color: var(--nord1);
 }
 
 .infoCards > *:first-child {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    row-gap: 0.5rem;
 }
 
 .infoCards > *:first-child > * {
-    outline: red 2px solid;
-    padding: 1rem;
+    border-bottom: 5px solid var(--nord4);
+    padding: 0.5rem;
 }
 
 .dl {
@@ -64,13 +75,30 @@
 
 .dl > dt {
     width: fit-content;
-    outline: 1px red solid;
+    background-color: var(--nord2);
+
     margin-bottom: 1rem;
     padding: 1rem;
 }
 
 .dl > dd {
-    outline: 1px red solid;
+    background-color: var(--nord1);
     margin-bottom: 2rem;
     padding: 1rem;
 }
+
+@media only screen and (max-width: 1000px) {
+    .title {
+        font-size: 5rem;
+    }
+    .infoCards {
+        flex-direction: column;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .title {
+        font-size: 4rem;
+    }
+}
+

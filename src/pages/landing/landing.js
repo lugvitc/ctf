@@ -37,9 +37,9 @@ export default function Landing() {
                 <div className={styles.infoCards}>
                     <div>
                         <div>AB-1: 205A, 205B, 207</div>
-                        <div>10 A.M. to 10 10 A.M.</div>
+                        <div>10 A.M. to 10 A.M.</div>
                         <div>
-                            24<sup>th</sup> to 25<sup>th</sup> September
+                            24<sup>th</sup> to 25<sup>th</sup> Sep
                         </div>
                     </div>
                     <div>
