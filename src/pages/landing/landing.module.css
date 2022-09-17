@@ -1,0 +1,76 @@
+.all {
+    /* scroll-snap-type: y mandatory;
+    overflow-y: scroll; */
+    font-size: x-large;
+}
+
+.section {
+    min-height: calc(100vh - 3rem);
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    /* scroll-snap-align: start; */
+}
+
+.logoRow {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-evenly;
+
+    margin-block: 1rem;
+}
+
+.logo {
+    height: 7rem;
+    display: block;
+}
+
+.title {
+    margin-block: 0rem;
+    font-size: 10rem;
+}
+
+.infoCards {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    flex-direction: row;
+    flex: 1;
+    padding-block: 1rem;
+}
+
+.infoCards > * {
+    outline: red 2px solid;
+    padding: 3rem;
+}
+
+.infoCards > *:first-child {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.infoCards > *:first-child > * {
+    outline: red 2px solid;
+    padding: 1rem;
+}
+
+.dl {
+    padding-inline: 1rem;
+    width: calc(100% - 2rem);
+}
+
+.dl > dt {
+    width: fit-content;
+    outline: 1px red solid;
+    margin-bottom: 1rem;
+    padding: 1rem;
+}
+
+.dl > dd {
+    outline: 1px red solid;
+    margin-bottom: 2rem;
+    padding: 1rem;
+}

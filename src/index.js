@@ -7,7 +7,7 @@ import './styles/colors.css';
 
 import App from './App';
 
-import Landing from './pages/landing';
+import Landing from './pages/landing/landing';
 import Signup from './pages/signup/signup';
 import Login from './pages/login';
 import Play from './pages/play/play';
