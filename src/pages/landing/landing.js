@@ -80,6 +80,40 @@ export default function Landing() {
             </section>
             <section className={styles.section}>
                 <h2>Queries</h2>
+                <dl className={styles.dl}>
+                    <dt>Student Coordinators</dt>
+                    <dd>
+                        <ul>
+                            <li>Swaifa Haque: 93724 62680</li>
+                            <li>Abhiram Arumilli: 83338 42117</li>
+                        </ul>
+                    </dd>
+                    <dt>Faculty Coordinators</dt>
+                    <dd>
+                        <ul>
+                            <li>Dr. R Vedhapriyavadhana</li>
+                            <li>Dr. Gayathri R.</li>
+                        </ul>
+                    </dd>
+                    <dt>Contact Us</dt>
+                    <dd>
+                        Linux Club:
+                        <ul>
+                            <li>Email: cclinuxclub@vit.ac.in</li>
+                            <li>
+                                Instagram: https://www.instagram.com/lugvitc/
+                            </li>
+                            <li>Website: https://lugvitc.github.io/</li>
+                        </ul>
+                    </dd>
+                    <dd>
+                        Tech Researchers Club:
+                        <ul>
+                            <li>Email: </li>
+                            <li>Instagram: </li>
+                        </ul>
+                    </dd>
+                </dl>
             </section>
         </div>
     );
