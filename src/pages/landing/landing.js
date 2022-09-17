@@ -101,16 +101,38 @@ export default function Landing() {
                         <ul>
                             <li>Email: cclinuxclub@vit.ac.in</li>
                             <li>
-                                Instagram: https://www.instagram.com/lugvitc/
+                                <a
+                                    href='https://www.instagram.com/lugvitc/'
+                                    target='_blank'
+                                    rel='noreferrer'
+                                >
+                                    Instagram
+                                </a>
                             </li>
-                            <li>Website: https://lugvitc.github.io/</li>
+                            <li>
+                                <a
+                                    href='https://lugvitc.github.io/'
+                                    target='_blank'
+                                    rel='noreferrer'
+                                >
+                                    Website
+                                </a>
+                            </li>
                         </ul>
                     </dd>
                     <dd>
                         Tech Researchers Club:
                         <ul>
-                            <li>Email: </li>
-                            <li>Instagram: </li>
+                            <li>Email: techresearchers.vitc@gmail.com</li>
+                            <li>
+                                <a
+                                    href='https://www.instagram.com/techresearchers.vitc/'
+                                    target='_blank'
+                                    rel='noreferrer'
+                                >
+                                    Instagram
+                                </a>
+                            </li>
                         </ul>
                     </dd>
                 </dl>
