@@ -1,13 +1,19 @@
 {
   "files": {
-    "main.css": "/ctf/static/css/main.188c27bb.css",
-    "main.js": "/ctf/static/js/main.053342cf.js",
+    "main.css": "/ctf/static/css/main.8617a6ec.css",
+    "main.js": "/ctf/static/js/main.31702758.js",
+    "static/media/qubit.png": "/ctf/static/media/qubit.3fa3d8104a8c61185607.png",
+    "static/media/vit.png": "/ctf/static/media/vit.716f25e7957c15338a15.png",
+    "static/media/technovit.png": "/ctf/static/media/technovit.16d7453920dafe6d9908.png",
+    "static/media/qr.jpeg": "/ctf/static/media/qr.d88b66f6a5dc76cf6cd4.jpeg",
+    "static/media/lug.png": "/ctf/static/media/lug.5dbd07a4632428f4f303.png",
+    "static/media/trc.png": "/ctf/static/media/trc.633b045e9550a7bccb1d.png",
     "index.html": "/ctf/index.html",
-    "main.188c27bb.css.map": "/ctf/static/css/main.188c27bb.css.map",
-    "main.053342cf.js.map": "/ctf/static/js/main.053342cf.js.map"
+    "main.8617a6ec.css.map": "/ctf/static/css/main.8617a6ec.css.map",
+    "main.31702758.js.map": "/ctf/static/js/main.31702758.js.map"
   },
   "entrypoints": [
-    "static/css/main.188c27bb.css",
-    "static/js/main.053342cf.js"
+    "static/css/main.8617a6ec.css",
+    "static/js/main.31702758.js"
   ]
 }
