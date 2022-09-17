@@ -9,6 +9,8 @@ import qubitLogo from './qubit.png';
 import qr from './qr.jpeg';
 import React from 'react';
 
+import AnimateDL from './animateDL/animateDL';
+
 export default function Landing() {
     return (
         <div className={styles.all}>
@@ -52,18 +54,27 @@ export default function Landing() {
                 <h2>Schedule</h2>
                 <dl className={styles.dl}>
                     {days.map((day, index) => (
-                        <React.Fragment key={index}>
-                            <dt>{day.day}</dt>
-                            <dd>
-                                <ul>
-                                    {day.schedule.map(s => (
-                                        <li key={s.time}>
-                                            {s.time}: {s.description}
-                                        </li>
-                                    ))}
-                                </ul>
-                            </dd>
-                        </React.Fragment>
+                        <AnimateDL
+                            dt={day.day}
+                            dd={day.schedule.map(s => (
+                                <li key={s.time}>
+                                    {s.time}: {s.description}
+                                </li>
+                            ))}
+                            key={index}
+                        />
+                        // <React.Fragment key={index}>
+                        //     <dt>{day.day}</dt>
+                        //     <dd>
+                        //         <ul>
+                        //             {day.schedule.map(s => (
+                        //                 <li key={s.time}>
+                        //                     {s.time}: {s.description}
+                        //                 </li>
+                        //             ))}
+                        //         </ul>
+                        //     </dd>
+                        // </React.Fragment>
                     ))}
                 </dl>
             </section>
@@ -71,17 +82,80 @@ export default function Landing() {
                 <h2>FAQs</h2>
                 <dl className={styles.dl}>
                     {faqs.map(faq => (
-                        <React.Fragment key={faq.q}>
-                            <dt>{faq.q}</dt>
-                            <dd>{faq.a}</dd>
-                        </React.Fragment>
+                        <AnimateDL dt={faq.q} dd={faq.a} key={faq.q} />
+                        // <React.Fragment key={faq.q}>
+                        //     <dt>{faq.q}</dt>
+                        //     <dd>{faq.a}</dd>
+                        // </React.Fragment>
                     ))}
                 </dl>
             </section>
             <section className={styles.section}>
                 <h2>Queries</h2>
                 <dl className={styles.dl}>
-                    <dt>Student Coordinators</dt>
+                    <AnimateDL
+                        dt={'Student Coordinators'}
+                        dd={
+                            <ul>
+                                <li>Swaifa Haque: 93724 62680</li>
+                                <li>Abhiram Arumilli: 83338 42117</li>
+                            </ul>
+                        }
+                    />
+                    <AnimateDL
+                        dt={'Faculty Coordinators'}
+                        dd={
+                            <ul>
+                                <li>Dr. R Vedhapriyavadhana</li>
+                                <li>Dr. Gayathri R.</li>
+                            </ul>
+                        }
+                    />
+                    <AnimateDL
+                        dt={'Contact Us'}
+                        dd={
+                            <>
+                                Linux Club:
+                                <ul>
+                                    <li>Email: cclinuxclub@vit.ac.in</li>
+                                    <li>
+                                        <a
+                                            href='https://www.instagram.com/lugvitc/'
+                                            target='_blank'
+                                            rel='noreferrer'
+                                        >
+                                            Instagram
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a
+                                            href='https://lugvitc.github.io/'
+                                            target='_blank'
+                                            rel='noreferrer'
+                                        >
+                                            Website
+                                        </a>
+                                    </li>
+                                </ul>
+                                Tech Researchers Club:
+                                <ul>
+                                    <li>
+                                        Email: techresearchers.vitc@gmail.com
+                                    </li>
+                                    <li>
+                                        <a
+                                            href='https://www.instagram.com/techresearchers.vitc/'
+                                            target='_blank'
+                                            rel='noreferrer'
+                                        >
+                                            Instagram
+                                        </a>
+                                    </li>
+                                </ul>
+                            </>
+                        }
+                    />
+                    {/* <dt>Student Coordinators</dt>
                     <dd>
                         <ul>
                             <li>Swaifa Haque: 93724 62680</li>
@@ -134,7 +208,7 @@ export default function Landing() {
                                 </a>
                             </li>
                         </ul>
-                    </dd>
+                    </dd> */}
                 </dl>
             </section>
         </div>

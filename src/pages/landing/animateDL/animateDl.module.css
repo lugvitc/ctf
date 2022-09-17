@@ -1,0 +1,18 @@
+dt.hidden {
+    opacity: 0;
+}
+
+dt.show {
+    opacity: 1;
+    transition: all 0.5s;
+}
+
+dd.hidden {
+    opacity: 0;
+}
+
+dd.show {
+    opacity: 1;
+    transition: all 0.5s;
+    transition-delay: 0.2s;
+}
