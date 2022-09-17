@@ -2,6 +2,7 @@
     /* scroll-snap-type: y mandatory;
     overflow-y: scroll; */
     font-size: x-large;
+    overflow-wrap: break-word;
 }
 
 .section {
@@ -102,6 +103,16 @@
     }
     .logo {
         height: 5rem;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .title {
+        font-size: 3rem;
+    }
+    .logo {
+        width: fit-content;
+        height: 3rem;
     }
 }
 
