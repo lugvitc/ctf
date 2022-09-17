@@ -100,5 +100,8 @@
     .title {
         font-size: 4rem;
     }
+    .logo {
+        height: 5rem;
+    }
 }
 

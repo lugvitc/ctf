@@ -21,16 +21,8 @@ export default function Landing() {
                     <img className={styles.logo} src={vitLogo} />
                 </div>
                 <div className={styles.logoRow}>
-                    <img
-                        className={styles.logo}
-                        src={lugLogo}
-                        style={{ height: '8rem' }}
-                    />
-                    <img
-                        className={styles.logo}
-                        src={trcLogo}
-                        style={{ height: '8rem' }}
-                    />
+                    <img className={styles.logo} src={lugLogo} />
+                    <img className={styles.logo} src={trcLogo} />
                 </div>
                 <h1 className={styles.title}>Cyber-0-Day</h1>
                 <div className={styles.subtitle}>A 24-hour tech marathon</div>
