@@ -49,6 +49,7 @@ export default function ChallengeCard({ challenge, isSolved, qWasCorrect }) {
                         >
                             {challenge.description}
                         </ReactMarkdown>
+                        Solved by {challenge.solvedBy.length} teams
                     </div>
                 ) : (
                     'solved'

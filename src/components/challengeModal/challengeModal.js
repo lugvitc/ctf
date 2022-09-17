@@ -95,6 +95,7 @@ function ChallengeModal({
                         >
                             {challenge.description}
                         </ReactMarkdown>
+                        Solved by {challenge.solvedBy.length} teams
                     </div>
                 </div>
                 {loading ? (
