@@ -6,7 +6,7 @@ import trcLogo from './trc.png';
 import vitLogo from './vit.png';
 import technovitLogo from './technovit.png';
 import qubitLogo from './qubit.png';
-import qr from './qr.jpeg';
+import qr from './qr.png';
 import React from 'react';
 
 import AnimateDL from './animateDL/animateDL';
@@ -35,10 +35,10 @@ export default function Landing() {
                         </div>
                     </div>
                     <div>
-                        Registration Fees: <br /> ₹300/-
+                        Registration Fees: <br /> ₹300/- per person
                     </div>
                     <div>
-                        <img className={styles.logo} src={qr} />
+                        Register Here: <img className={styles.logo} src={qr} />
                     </div>
                 </div>
             </section>
