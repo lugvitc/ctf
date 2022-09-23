@@ -1,6 +1,7 @@
 export default function useFetch() {
     // const apiURL = 'https://backmagic.herokuapp.com/api';
-    const apiURL = 'https://dolphin-app-653c7.ondigitalocean.app/api';
+    // const apiURL = 'https://dolphin-app-653c7.ondigitalocean.app/api';
+    const apiURL = 'https://backmagic-jirrg.ondigitalocean.app/api';
     // const apiURL = 'http://localhost:5000/api';
 
     const api = (path, init) => fetch(apiURL + path, init);
