@@ -101,14 +101,19 @@ function ChallengeModal({
                 {loading ? (
                     <LoadingAnimation />
                 ) : (
-                    <>
+                    <div className='form-end'>
                         <input
                             value={inputValue}
                             onChange={inputChangeHandler}
                             className={styles.valid}
                         />
-                        <button onClick={submitFlag}>Submit</button>
-                    </>
+                        <button
+                            className='form-nav-button'
+                            onClick={submitFlag}
+                        >
+                            Submit
+                        </button>
+                    </div>
                 )}
             </>
         </dialog>

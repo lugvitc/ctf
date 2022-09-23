@@ -1,7 +1,14 @@
 main {
     background-color: var(--nord0);
+    padding-inline: 1rem;
+    padding-bottom: 1rem;
 }
 
 a {
     color: var(--nord10);
 }
+
+h1 {
+    text-align: center;
+}
+

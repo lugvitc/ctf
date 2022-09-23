@@ -6,8 +6,8 @@
 }
 
 .card {
-    background-color: var(--nord3);
-    border-radius: 0.5rem;
+    background-color: var(--nord2);
+    /* border-radius: 0.5rem; */
     display: flex;
     /* justify-content: center; */
 }

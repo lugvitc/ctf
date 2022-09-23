@@ -1,8 +1,8 @@
 .card {
-    border: 1px solid #2f3542;
+    background-color: var(--nord2);
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
     padding: 1.6rem;
-    border-radius: 0.5rem;
+    /* border-radius: 0.5rem; */
     cursor: pointer;
 }
 
