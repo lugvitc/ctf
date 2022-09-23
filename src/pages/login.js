@@ -46,7 +46,6 @@ export default function Login() {
                 <LoadingAnimation />
             ) : (
                 <>
-                    <h1> Login </h1>
                     <form className='lug-form' onSubmit={submit}>
                         <div className='form-start'> Login </div>
 
@@ -69,9 +68,10 @@ export default function Login() {
                                 value={loginValues.password}
                             />
                         </div>
-                        <div className='form-filed'>
-                            New user?, <NavLink to='/signup'>register</NavLink>{' '}
-                            now and start the challenge
+                        <div className='form-end'>
+                            New user?, <NavLink to='/signup'>register</NavLink>
+                            {'  '}
+                            now and start the challenge.
                         </div>
 
                         <div className='form-end'>

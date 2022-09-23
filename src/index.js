@@ -4,6 +4,7 @@ import { HashRouter, Routes, Route, Outlet } from 'react-router-dom';
 
 import './styles/index.css';
 import './styles/colors.css';
+import './styles/forms.css'
 
 import App from './App';
 

@@ -168,7 +168,7 @@ export default function Signup() {
                 </div>
 
                 <div className='form-end'>
-                    <button type='submit' className='form-nav-button next'>
+                    <button type='submit' className='form-nav-button'>
                         Create
                     </button>
                 </div>
