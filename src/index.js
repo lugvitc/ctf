@@ -4,7 +4,7 @@ import { HashRouter, Routes, Route, Outlet } from 'react-router-dom';
 
 import './styles/index.css';
 import './styles/colors.css';
-import './styles/forms.css'
+import './styles/forms.css';
 
 import App from './App';
 
@@ -23,7 +23,7 @@ root.render(
         <HashRouter>
             <Routes>
                 <Route path='/' element={<App />}>
-                    <Route index element={<Landing />} />
+                    <Route index element={<Signup />} />
                     <Route path='/signup' element={<Signup />} />
                     <Route path='/login' element={<Login />} />
                     <Route

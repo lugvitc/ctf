@@ -19,8 +19,8 @@ export default function Navbar() {
 
     return (
         <nav className={styles.all}>
-            <div className={styles.logos}>LUG x TRC</div>
-            <div className={styles.name}>Cyber-0-Day</div>
+            <div className={styles.logos}>Cyberpeace and LUGVITC's</div>
+            <div className={styles.name}>Hackers' Horizon CTF</div>
             <div className={styles.links}>
                 {links.map(link => (
                     <NavLink
