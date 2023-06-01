@@ -7,11 +7,14 @@
 
 .logos {
     padding: 1rem 0.5rem;
+    font-weight: bold;
 }
 
 .name {
-    padding: 1rem 0.5rem;
+    padding: 2rem 0.5rem;
     margin-left: auto;
+    font-weight: bold;
+
 }
 
 .links {
@@ -22,7 +25,7 @@
 }
 
 .link {
-    padding: 1rem 0.5rem;
+    padding: 2rem 0.5rem;
     display: block;
     color: var(--nord5);
     text-decoration: none;
