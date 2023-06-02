@@ -3,7 +3,7 @@ import styles from './challengeCard.module.css';
 import ChallengeModal from '../challengeModal/challengeModal';
 import ReactMarkdown from 'react-markdown';
 
-export default function ChallengeCard({ challenge, isSolved, qWasCorrect }) {
+export default function ChallengeCard({ challenge, isSolved, qWasCorrect, ques_no }) {
     const [questionModalOpen, setQuestionModalOpen] = useState(false);
     const modalRef = useRef(null);
 
@@ -24,6 +24,7 @@ export default function ChallengeCard({ challenge, isSolved, qWasCorrect }) {
                     setQuestionModalOpen={setQuestionModalOpen}
                     isSolved={isSolved}
                     qWasCorrect={qWasCorrect}
+                    ques_no={ques_no}
                 />
             )}
             <div
@@ -36,7 +37,7 @@ export default function ChallengeCard({ challenge, isSolved, qWasCorrect }) {
                 </div>
                 {!isSolved ? (
                     <div className={styles.description}>
-                        <ReactMarkdown
+                        {/* <ReactMarkdown
                             components={{
                                 a: props => (
                                     <a
@@ -48,7 +49,7 @@ export default function ChallengeCard({ challenge, isSolved, qWasCorrect }) {
                             }}
                         >
                             {challenge.description}
-                        </ReactMarkdown>
+                        </ReactMarkdown> */}
                         Solved by {challenge.solvedBy.length} teams
                     </div>
                 ) : (
