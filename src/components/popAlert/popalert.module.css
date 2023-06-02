@@ -1,7 +1,6 @@
 .pop_alert {
     left: 0;
-    background-color: red;
-    color: white;
+    color: red;
     padding: 10px;
     opacity: 0;
     transition: opacity 3s ease-in-out;
