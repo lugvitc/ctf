@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import styles from './challengeModal.module.css';
 import useFetch from '../../hooks/useFetch';
 import ReactMarkdown from 'react-markdown';
+import PopAlert from '../popAlert/popAlert';
 
 import LoadingAnimation from '../loadingAnimation/loadingAnimation';
 
@@ -13,6 +14,15 @@ function ChallengeModal({
     isSolved,
     qWasCorrect
 }) {
+    const [showAlert, setShowAlert] = useState(false);
+
+    const handleShowAlert = () => {
+      setShowAlert(true);
+    };
+  
+    const handleCloseAlert = () => {
+      setShowAlert(false);
+    };
     const [inputValue, setInputValue] = useState('');
     const [loading, setLoading] = useState(false);
 
@@ -43,10 +53,11 @@ function ChallengeModal({
                 setQuestionModalOpen(false);
                 qWasCorrect();
             } else {
-                alert('invalid flag');
+                handleShowAlert();
                 setLoading(false);
             }
         } catch {
+            
             alert('error');
             setLoading(false);
         }
@@ -65,6 +76,7 @@ function ChallengeModal({
         };
     }, [modalRef, questionModalOpen, closeQuestionModal]);
 
+    
     return (
         <dialog ref={modalRef} open={false} className={styles.modal}>
             <>
@@ -115,6 +127,13 @@ function ChallengeModal({
                         </button>
                     </div>
                 )}
+                {showAlert && (
+        <PopAlert
+          message="Invalid flag"
+          duration={3000}
+          onClose={handleCloseAlert}
+        />
+      )}
             </>
         </dialog>
     );

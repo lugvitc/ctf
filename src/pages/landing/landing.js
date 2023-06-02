@@ -1,11 +1,10 @@
 import styles from './landing.module.css';
-import { faqs, days } from './content';
+import { faqs, days, info } from './content';
 
 import lugLogo from './lug.png';
-import trcLogo from './trc.png';
 import vitLogo from './vit.png';
-import technovitLogo from './technovit.png';
-import qubitLogo from './qubit.png';
+import corizoLogo from './corizo.png';
+import ideassionLogo from './ideassion.png';
 import qr from './qr.png';
 import React from 'react';
 
@@ -16,26 +15,28 @@ export default function Landing() {
         <div className={styles.all}>
             <section className={styles.section}>
                 <div className={styles.logoRow}>
-                    <img className={styles.logo} src={technovitLogo} />
-                    <img className={styles.logo} src={qubitLogo} />
+                    <img className={styles.logo} src={lugLogo} />
                     <img className={styles.logo} src={vitLogo} />
                 </div>
+                <h3>Sponsors</h3>
                 <div className={styles.logoRow}>
-                    <img className={styles.logo} src={lugLogo} />
-                    <img className={styles.logo} src={trcLogo} />
+                    <img className={styles.logo} src={corizoLogo} />
+                    <img className={styles.logo} style={{ width: "200px", height: "auto" }} src={ideassionLogo} />
+
                 </div>
-                <h1 className={styles.title}>Cyber-0-Day</h1>
-                <div className={styles.subtitle}>A 24-hour tech marathon</div>
+
+                <h1 className={styles.title}>{info.Event}</h1>
+                <div className={styles.subtitle}>{info.Subtitle}</div>
                 <div className={styles.infoCards}>
                     <div>
-                        <div>AB-1: 205A, 205B, 207</div>
-                        <div>10 A.M. to 10 A.M.</div>
+                        <div>{info.Location}</div>
+
                         <div>
-                            24<sup>th</sup> to 25<sup>th</sup> Sep
+                            {info.Dates}
                         </div>
                     </div>
                     <div>
-                        Registration Fees: <br /> ₹300/- per person
+                        Registration Fees: <br /> {info.Fees}
                     </div>
                     <div>
                         Register Here: <img className={styles.logo} src={qr} />
@@ -50,7 +51,7 @@ export default function Landing() {
                             dt={day.day}
                             dd={day.schedule.map(s => (
                                 <li key={s.time}>
-                                    {s.time}: {s.description}
+                                    {s.time} {s.description}
                                 </li>
                             ))}
                             key={index}
@@ -85,12 +86,13 @@ export default function Landing() {
             <section className={styles.section}>
                 <h2>Queries</h2>
                 <dl className={styles.dl}>
+
                     <AnimateDL
                         dt={'Student Coordinators'}
                         dd={
                             <ul>
-                                <li>Swaifa Haque: 93724 62680</li>
-                                <li>Abhiram Arumilli: 83338 42117</li>
+                                <li>Ansh Sharma: +919540018950</li>
+                                
                             </ul>
                         }
                     />
@@ -98,8 +100,8 @@ export default function Landing() {
                         dt={'Faculty Coordinators'}
                         dd={
                             <ul>
-                                <li>Dr. R Vedhapriyavadhana</li>
                                 <li>Dr. Gayathri R.</li>
+                                <li>Dr. Rajiv Vincent</li>
                             </ul>
                         }
                     />
@@ -109,7 +111,7 @@ export default function Landing() {
                             <>
                                 Linux Club:
                                 <ul>
-                                    <li>Email: cclinuxclub@vit.ac.in</li>
+                                    <li>Email: <a href='mailto:cclinuxclub@vit.ac.in'>cclinuxclub@vit.ac.in</a></li>
                                     <li>
                                         <a
                                             href='https://www.instagram.com/lugvitc/'
@@ -126,21 +128,6 @@ export default function Landing() {
                                             rel='noreferrer'
                                         >
                                             Website
-                                        </a>
-                                    </li>
-                                </ul>
-                                Tech Researchers Club:
-                                <ul>
-                                    <li>
-                                        Email: techresearchers.vitc@gmail.com
-                                    </li>
-                                    <li>
-                                        <a
-                                            href='https://www.instagram.com/techresearchers.vitc/'
-                                            target='_blank'
-                                            rel='noreferrer'
-                                        >
-                                            Instagram
                                         </a>
                                     </li>
                                 </ul>
