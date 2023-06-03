@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import styles from './challengeModal.module.css';
 import useFetch from '../../hooks/useFetch';
 import ReactMarkdown from 'react-markdown';
+import PopAlert from '../popAlert/popAlert';
 
 import LoadingAnimation from '../loadingAnimation/loadingAnimation';
 
@@ -87,6 +88,9 @@ function ChallengeModal({
     }, [modalRef, questionModalOpen, closeQuestionModal]);
 
     return (
+
+        <>
+
         <dialog ref={modalRef} open={false} className={styles.modal}>
             <>
                 {isSolved && 'done'}
@@ -223,6 +227,7 @@ function ChallengeModal({
                 </div>
             </>
         </dialog>
+        </>
     );
 }
 
