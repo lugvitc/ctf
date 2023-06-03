@@ -39,9 +39,9 @@ export default function Signup() {
     //         }
     //     };
 
-    //     verifyRegNo('member1RegNo', '/rt22/verify-duplicate-regno');
-    //     verifyRegNo('member2RegNo', '/rt22/verify-duplicate-regno');
-    //     verifyRegNo('member3RegNo', '/rt22/verify-duplicate-regno');
+    //     verifyRegNo('member1RegNo', '/ctf/verify-duplicate-regno');
+    //     verifyRegNo('member2RegNo', '/ctf/verify-duplicate-regno');
+    //     verifyRegNo('member3RegNo', '/ctf/verify-duplicate-regno');
     // }, [
     //     teamValues.member1RegNo,
     //     teamValues.member2RegNo,
@@ -60,7 +60,7 @@ export default function Signup() {
             if (!teamValues.member2RegNo) delete teamValues['member2RegNo'];
             if (!teamValues.member3RegNo) delete teamValues['member3RegNo'];
 
-            const r1 = await apiPost('/rt22/verify-team-name', {
+            const r1 = await apiPost('/ctf/verify-team-name', {
                 name: teamValues.name
             });
             const d1 = await r1.json();
@@ -75,7 +75,7 @@ export default function Signup() {
                     ? teamValuesAreValid.member3RegNo
                     : true)
             ) {
-                const res = await apiPost('/rt22/create-team', teamValues);
+                const res = await apiPost('/ctf/create-team', teamValues);
                 if (res.ok) {
                     navigate('/login');
                 }

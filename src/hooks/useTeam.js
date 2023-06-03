@@ -12,12 +12,12 @@ export default function useTeam() {
     const { apiPostGetJsonAsTeam, apiAsTeam } = useFetch();
 
     const fetchTeam = async () => {
-        const data = await apiPostGetJsonAsTeam('/rt22/team');
+        const data = await apiPostGetJsonAsTeam('/ctf/team');
         setTeam(data);
     };
 
     const logoutTeam = () => {
-        // apiAsTeam('/rt22/logout');
+        // apiAsTeam('/ctf/logout');
         window.localStorage.setItem('access-token', '');
         setTeam(null);
     };

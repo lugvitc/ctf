@@ -17,7 +17,7 @@ export default function Play() {
     const { team, logoutTeam, fetchTeam } = useTeam();
 
     const fetchChallenges = async () => {
-        const data = await apiPostGetJsonAsTeam('/rt22/challenges');
+        const data = await apiPostGetJsonAsTeam('/ctf/challenges');
         setChallenges(data.challenges);
     };
 
