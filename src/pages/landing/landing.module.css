@@ -6,7 +6,7 @@
 }
 
 .section {
-    min-height: calc(100vh - 3rem);
+    
     display: flex;
     flex-direction: column;
     /* justify-content: center; */
@@ -73,7 +73,12 @@
     padding-inline: 1rem;
     width: calc(100% - 2rem);
 }
-
+.dl li{
+    list-style-position: outside;
+    text-indent: -1.5em;
+    padding-left: 1.5em;
+    
+}
 .dl > dt {
     width: fit-content;
     background-color: var(--nord2);
