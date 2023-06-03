@@ -1,19 +1,18 @@
 {
   "files": {
-    "main.css": "/ctf/static/css/main.de7ef130.css",
-    "main.js": "/ctf/static/js/main.cf5162b5.js",
-    "static/media/qubit.png": "/ctf/static/media/qubit.3fa3d8104a8c61185607.png",
+    "main.css": "/ctf/static/css/main.f02a0703.css",
+    "main.js": "/ctf/static/js/main.2be15002.js",
     "static/media/vit.png": "/ctf/static/media/vit.716f25e7957c15338a15.png",
-    "static/media/technovit.png": "/ctf/static/media/technovit.16d7453920dafe6d9908.png",
+    "static/media/ideassion.png": "/ctf/static/media/ideassion.6e5e0e33ba1cc8719471.png",
     "static/media/lug.png": "/ctf/static/media/lug.5dbd07a4632428f4f303.png",
-    "static/media/qr.png": "/ctf/static/media/qr.7dba72a0c8e0b039a289.png",
-    "static/media/trc.png": "/ctf/static/media/trc.633b045e9550a7bccb1d.png",
+    "static/media/corizo.png": "/ctf/static/media/corizo.e590aa1705d9a12e06f7.png",
+    "static/media/qr.png": "/ctf/static/media/qr.c57665dfa4918fbc51c4.png",
     "index.html": "/ctf/index.html",
-    "main.de7ef130.css.map": "/ctf/static/css/main.de7ef130.css.map",
-    "main.cf5162b5.js.map": "/ctf/static/js/main.cf5162b5.js.map"
+    "main.f02a0703.css.map": "/ctf/static/css/main.f02a0703.css.map",
+    "main.2be15002.js.map": "/ctf/static/js/main.2be15002.js.map"
   },
   "entrypoints": [
-    "static/css/main.de7ef130.css",
-    "static/js/main.cf5162b5.js"
+    "static/css/main.f02a0703.css",
+    "static/js/main.2be15002.js"
   ]
 }
