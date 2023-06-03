@@ -14,7 +14,6 @@ import Login from './pages/login';
 import Play from './pages/play/play';
 import Leaderboard from './pages/leaderboard';
 import Team from './pages/team';
-
 import LoggedInRoute from './components/loggedInRoute';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -23,7 +22,7 @@ root.render(
         <HashRouter>
             <Routes>
                 <Route path='/' element={<App />}>
-                    <Route index element={<Signup />} />
+                    <Route index element={<Landing />} />
                     <Route path='/signup' element={<Signup />} />
                     <Route path='/login' element={<Login />} />
                     <Route

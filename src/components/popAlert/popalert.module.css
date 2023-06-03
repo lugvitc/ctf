@@ -1,0 +1,25 @@
+.pop_alert {
+    left: 0;
+    color: red;
+    padding: 10px;
+    opacity: 0;
+    transition: opacity 3s ease-in-out;
+  }
+
+  .visible {
+    opacity: 1;
+  }
+  
+  .hidden {
+    opacity: 0;
+  }
+  
+  .pop_alert_content {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .pop_alert_message {
+    font-weight: bold;
+  }
+  

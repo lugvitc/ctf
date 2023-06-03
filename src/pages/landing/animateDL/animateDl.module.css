@@ -14,5 +14,4 @@ dd.hidden {
 dd.show {
     opacity: 1;
     transition: all 0.5s;
-    transition-delay: 0.2s;
 }
