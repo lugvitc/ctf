@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react'
 import { NavLink } from 'react-router-dom';
 
 import useFetch from '../../hooks/useFetch';
@@ -6,6 +6,7 @@ import useTeam from '../../hooks/useTeam';
 import ChallengeCard from '../../components/challengeCard/challengeCard';
 
 import styles from './play.module.css';
+// import NotPlay from './notplay';
 import LoadingAnimation from '../../components/loadingAnimation/loadingAnimation';
 
 export default function Play() {
@@ -29,8 +30,14 @@ export default function Play() {
         fetchTeam();
     };
 
+
+
+
 return (
     <>
+
+    <div className="playTime">
+
         <h1>Play</h1>
         <h2>Instructions</h2>
         <p>
@@ -72,6 +79,7 @@ return (
                 )}
             </div>
         </div>
+    </div>
 
         
     </>

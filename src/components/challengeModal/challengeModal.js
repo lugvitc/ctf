@@ -25,6 +25,8 @@ function ChallengeModal({
     const handleCloseAlert = () => {
       setShowAlert(false);
     };
+    // const [timer, setTimer] = useState(false);
+
 
     const [inputValue, setInputValue] = useState('');
     const [hint_1, setHint1] = useState('');
@@ -90,7 +92,6 @@ function ChallengeModal({
     return (
 
         <>
-
         <dialog ref={modalRef} open={false} className={styles.modal}>
             <>
                 {isSolved && 'done'}

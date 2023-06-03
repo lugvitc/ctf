@@ -18,7 +18,7 @@ export default function Landing() {
                     <img className={styles.logo} src={lugLogo} />
                     <img className={styles.logo} src={vitLogo} />
                 </div>
-                <h3>Sponsors</h3>
+                <h3 className={styles.sponsors}>Sponsors</h3>
                 <div className={styles.logoRow}>
                     <img className={styles.logo} src={corizoLogo} />
                     <img className={styles.logo} style={{ width: "200px", height: "auto" }} src={ideassionLogo} />
