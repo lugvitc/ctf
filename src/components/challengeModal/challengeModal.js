@@ -153,12 +153,9 @@ function ChallengeModal({
                         className='form-nav-button'
                         onClick={() => {
                             console.log(ques_no);
-                            api("/show_hint", {
-                                "method": "POST",
-                                "body": JSON.stringify({
+                            apiPostAsTeam("/ctf/getHint", {
                                     hint: 0,
-                                    ques: ques_no
-                                })
+                                    challenge_id: ques_no
                             })
                                 .then(res => res.json())
                                 .then((data) => {
@@ -178,12 +175,9 @@ function ChallengeModal({
                         className='form-nav-button'
                         onClick={() => {
                             console.log(ques_no);
-                            api("/show_hint", {
-                                "method": "POST",
-                                "body": JSON.stringify({
+                            apiPostAsTeam("/ctf/getHint", {
                                     hint: 1,
-                                    ques: ques_no
-                                })
+                                    challenge_id: ques_no
                             })
                                 .then(res => res.json())
                                 .then((data) => {
@@ -203,12 +197,9 @@ function ChallengeModal({
                         className='form-nav-button'
                         onClick={() => {
                             console.log(ques_no);
-                            api("/show_hint", {
-                                "method": "POST",
-                                "body": JSON.stringify({
+                            apiPostAsTeam("/ctf/getHint", {
                                     hint: 2,
-                                    ques: ques_no
-                                })
+                                    challenge_id: ques_no
                             })
                                 .then(res => res.json())
                                 .then((data) => {
