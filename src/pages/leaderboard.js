@@ -11,7 +11,7 @@ export default function Leaderboard() {
 
     useEffect(() => {
         const fetchTeams = async () => {
-            const data = await apiPostGetJsonAsTeam('/rt22/teams');
+            const data = await apiPostGetJsonAsTeam('/ctf/teams');
             setTeams(data.teams);
             console.log(teams);
         };

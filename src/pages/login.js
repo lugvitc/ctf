@@ -27,7 +27,7 @@ export default function Login() {
             alert('Please fill out all the fields');
         } else {
             setLoading(true);
-            const res = await apiPost('/rt22/team-login', loginValues);
+            const res = await apiPost('/ctf/team-login', loginValues);
             if (res.ok) {
                 const data = await res.json();
                 window.localStorage.setItem('access-token', data.access_token);

@@ -54,7 +54,7 @@ function ChallengeModal({
     const { apiPostAsTeam, api } = useFetch();
 
     const submitFlag = async () => {
-        const res = await apiPostAsTeam('/rt22/submit-flag', {
+        const res = await apiPostAsTeam('/ctf/submit-flag', {
             flag: inputValue,
             challenge_id: challenge.id
         });
