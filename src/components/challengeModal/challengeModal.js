@@ -14,6 +14,17 @@ function ChallengeModal({
     qWasCorrect,
     ques_no
 }) {
+
+    const [showAlert, setShowAlert] = useState(false);
+
+    const handleShowAlert = () => {
+      setShowAlert(true);
+    };
+  
+    const handleCloseAlert = () => {
+      setShowAlert(false);
+    };
+
     const [inputValue, setInputValue] = useState('');
     const [hint_1, setHint1] = useState('');
     const [hint_2, setHint2] = useState('');
@@ -52,7 +63,8 @@ function ChallengeModal({
                 setQuestionModalOpen(false);
                 qWasCorrect();
             } else {
-                alert('invalid flag');
+                // alert('invalid flag');
+                handleShowAlert();
                 setLoading(false);
             }
         } catch {
@@ -124,6 +136,13 @@ function ChallengeModal({
                         </button>
                     </div>
                 )}
+        {showAlert && (
+        <PopAlert
+          message="Invalid flag"
+          duration={3000}
+          onClose={handleCloseAlert}
+        />
+      )}
                 <div className={styles.hints}>
                     <button
                         className='form-nav-button'
@@ -198,7 +217,7 @@ function ChallengeModal({
                     </button>
                     {showHints.hint3 && (
                         <div className={styles.hintText}>
-                            {/* {hint3} */}
+                            {hint_3}
                         </div>
                     )}
                 </div>
