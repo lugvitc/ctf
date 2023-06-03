@@ -29,27 +29,26 @@ export default function Play() {
         fetchTeam();
     };
 
-    return (
-        <>
-            <h1>Play</h1>
-            <h2>Instructions</h2>
-            <p>
-                The file/link in every challenge hides a flag, which is a string
-                of the format <code>{'rtf_{...}'}</code>
-            </p>
-            <h2>Challenges</h2>
-            <div>
-                <input
-                    type='checkbox'
-                    onChange={e => setShowSolvedChallenges(e.target.checked)}
-                />
-                <label>Show solved challenges</label>
-            </div>
-            <br />
-
-            {challenges ? (
-                <div className={styles.challenges}>
-                    {challenges
+return (
+    <>
+        <h1>Play</h1>
+        <h2>Instructions</h2>
+        <p>
+            The file/link in every challenge hides a flag, which is a string
+            of the format <code>{'rtf_{...}'}</code>
+        </p>
+        <h2>Challenges</h2>
+        <div className={styles.checkboxContainer}>
+            <input
+                type='checkbox'
+                onChange={e => setShowSolvedChallenges(e.target.checked)}
+            />
+            <label>Show solved challenges</label>
+        </div>
+        <div className={styles.centerContainer}>
+            <div className={styles.challengesGrid}>
+                {challenges ? (
+                    challenges
                         .filter(c =>
                             showSolvedChallenges
                                 ? true
@@ -65,13 +64,17 @@ export default function Play() {
                                         : false
                                 }
                                 qWasCorrect={qWasCorrect}
+                                ques_no = {c.id}
                             />
-                        ))}
-                </div>
-            ) : (
-                <LoadingAnimation />
-            )}
-        </>
-    );
-}
+                        ))
+                ) : (
+                    <LoadingAnimation />
+                )}
+            </div>
+        </div>
 
+        
+    </>
+);
+
+}
