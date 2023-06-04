@@ -3,7 +3,6 @@ import { faqs, days, info } from './content';
 
 import lugLogo from './lug.png';
 import vitLogo from './vit.png';
-import corizoLogo from './corizo.png';
 import ideassionLogo from './ideassion.png';
 import qr from './qr.png';
 import React from 'react';
@@ -15,18 +14,20 @@ export default function Landing() {
         <div className={styles.all}>
             <section className={styles.section}>
                 <div className={styles.logoRow}>
-                    <img className={styles.logo} src={lugLogo} />
                     <img className={styles.logo} src={vitLogo} />
-                </div>
-                <h3 className={styles.sponsors}>Sponsors</h3>
-                <div className={styles.logoRow}>
-                    <img className={styles.logo} src={corizoLogo} />
-                    <img className={styles.logo} style={{ width: "200px", height: "auto" }} src={ideassionLogo} />
+                    <div className={styles.center}>
+                        <h3 className={styles.sponsors}>SPONSORS</h3>
+                        <div>
+                            <img className={styles.logo} style={{ width: "200px", height: "auto" }} src={ideassionLogo} />
+                        </div>
+                    </div>
+                    <img className={styles.logo} src={lugLogo} />
 
                 </div>
+
 
                 <h1 className={styles.title}>{info.Event}</h1>
-                <div className={styles.subtitle}>{info.Subtitle}</div>
+                <div className={styles.tagline}>{info.Subtitle}</div>
                 <div className={styles.infoCards}>
                     <div>
                         <div>{info.Location}</div>
@@ -36,22 +37,22 @@ export default function Landing() {
                         </div>
                     </div>
                     <div>
-                        Registration Fees: <br /> {info.Fees}
+                        ENTRY FEES <br /> {info.Fees}
                     </div>
                     <div>
-                        Register Here: <img className={styles.logo} src={qr} />
+                        <strong>REGISTER</strong> <img className={styles.qr} src={qr} />
                     </div>
                 </div>
             </section>
             <section className={styles.section}>
-                <h2>Schedule</h2>
+                <h2 className={styles.subtitle}>SCHEDULE</h2>
                 <dl className={styles.dl}>
                     {days.map((day, index) => (
                         <AnimateDL
                             dt={day.day}
                             dd={day.schedule.map(s => (
-                                <li key={s.time}>
-                                    {s.time} {s.description}
+                                <li className={styles.schedule}>
+                                    {s.description}
                                 </li>
                             ))}
                             key={index}
@@ -72,7 +73,7 @@ export default function Landing() {
                 </dl>
             </section>
             <section className={styles.section} id='faq'>
-                <h2>FAQs</h2>
+                <h2 className={styles.subtitle}>FAQs</h2>
                 <dl className={styles.dl}>
                     {faqs.map(faq => (
                         <AnimateDL dt={faq.q} dd={faq.a} key={faq.q} />
@@ -92,7 +93,7 @@ export default function Landing() {
                         dd={
                             <ul>
                                 <li>Ansh Sharma: +919540018950</li>
-                                
+
                             </ul>
                         }
                     />

@@ -1,6 +1,7 @@
 .all {
     background-color: var(--header-footer-black);
-
+    padding-left: 1em;
+    padding-right: 1em;
     display: flex;
     flex-direction: row;
 }
