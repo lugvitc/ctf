@@ -26,3 +26,5 @@ All the code related to the website are placed inside the `src` directory.
 
 # Contributing
 Thank you for your interest in contributing for the project. Checkout the [Contributing Guidelines](https://github.com/lugvitc/ctf/blob/master/CONTRIBUTING.md) before submitting any PR. Submit small changes in a single PR so that it is easier to review (for instance, work on one feature in one PR). 
+
+# trial
