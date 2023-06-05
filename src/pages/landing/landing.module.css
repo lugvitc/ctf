@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap');
 .all {
     /* scroll-snap-type: y mandatory;
     overflow-y: scroll; */
@@ -7,7 +8,6 @@
 }
 
 .section {
-    
     display: flex;
     flex-direction: column;
     /* justify-content: center; */
@@ -18,31 +18,55 @@
 .logoRow {
     display: flex;
     flex-direction: row;
-    width: 100%;
-    justify-content: space-evenly;
-
-    margin-block: 1rem;
+    width: 90%;
+    align-items: center;
+    justify-content: space-between;
+    margin-block: 2rem;
+    
 }
 
 .logo {
-    height: 7rem;
+    height: 10rem;
     display: block;
 }
+.center{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .sponsors{
-    font-family: 'Press Start 2P', cursive;
-    font-size: 30px;
+    color: var(--nord12);
+    font-size: 20px;
+    font-family: 'Nunito', sans-serif;
+    letter-spacing: 8px;
 }
 .title {
-    margin-block: 0rem;
-    font-size: 7rem;
+    letter-spacing: 10px;
+    margin-block: 5rem;
+    font-size: 5rem;
     font-family: 'Press Start 2P', cursive;
 
 }
+.tagline{
+    margin-top: -25px;
+    font-size: 23px;
+    font-family: 'Press Start 2P', cursive;
+    margin-bottom: 4em;
+}
 .subtitle{
-    margin-top: 20px;
+    margin-top: 5em;
+    font-size: 23px;
     font-family: 'Press Start 2P', cursive;
 }
+.qr{
+    margin-top: 20px;
+    height: 8em;
+    border-radius: 30px;
+}
 .infoCards {
+    
     display: flex;
     width: 100%;
     justify-content: space-evenly;
@@ -52,8 +76,10 @@
 }
 
 .infoCards > * {
+    width: 275px;
+    align-items: center;
     padding: 2rem;
-    flex: 1 1 0px;
+    border-radius: 30px;
     display: grid;
     place-items: center;
 }
@@ -63,13 +89,14 @@
 }
 
 .infoCards > *:nth-child(2n) {
-    background-color: var(--nord1);
+    background-color: var(--nord2);
 }
 
 .infoCards > *:first-child {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    align-items: center;
     row-gap: 0.5rem;
 }
 
@@ -130,3 +157,6 @@
     }
 }
 
+.schedule{
+    font-size: 20px;
+}

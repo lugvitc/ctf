@@ -35,7 +35,7 @@ export default function Login() {
                 if (location.pathname === '/login') navigate('/play');
             } else {
                 setLoading(false);
-                window.alert('There was an error');
+                window.alert('Invalid Username or Password');
             }
         }
     };
