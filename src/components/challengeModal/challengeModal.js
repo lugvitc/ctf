@@ -6,10 +6,13 @@ import PopAlert from '../popAlert/popAlert';
 
 import LoadingAnimation from '../loadingAnimation/loadingAnimation';
 const myStyle={
-    margin: "20px 20px 20px 20px",
     textDecoration:"none",
     fontFamily:"monospace",
-    color:"#5645a4"
+    color:"#ebcece",
+    fontSize:"14px",
+    marginBottom:"5px",
+    paddingRight:"8px",
+    backgroundColor:""
   }
 function ChallengeModal({
     challenge,
@@ -126,11 +129,13 @@ function ChallengeModal({
                         >
                             {challenge.description}
                             {/* links added */}
+                            {/* dhananjay added above with meetesh */}
+                        </ReactMarkdown>
+                        <div className={styles.ctfLinks}>
                             {challenge.links.map((item)=>
                                 <a href={item.link} style={myStyle} >{item.name}</a>
                             )}
-                            {/* dhananjya added above with meetesh */}
-                        </ReactMarkdown>
+                        </div>
                         Solved by {challenge.solvedBy.length} teams
                     </div>
                 </div>
