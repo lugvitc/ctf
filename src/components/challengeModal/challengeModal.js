@@ -5,7 +5,12 @@ import ReactMarkdown from 'react-markdown';
 import PopAlert from '../popAlert/popAlert';
 
 import LoadingAnimation from '../loadingAnimation/loadingAnimation';
-
+const myStyle={
+    margin: "20px 20px 20px 20px",
+    textDecoration:"none",
+    fontFamily:"monospace",
+    color:"#5645a4"
+  }
 function ChallengeModal({
     challenge,
     modalRef,
@@ -120,6 +125,11 @@ function ChallengeModal({
                             }}
                         >
                             {challenge.description}
+                            {/* links added */}
+                            {challenge.links.map((item)=>
+                                <a href={item.link} style={myStyle} >{item.name}</a>
+                            )}
+                            {/* dhananjya added above with meetesh */}
                         </ReactMarkdown>
                         Solved by {challenge.solvedBy.length} teams
                     </div>
