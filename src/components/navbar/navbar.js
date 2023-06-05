@@ -19,7 +19,7 @@ export default function Navbar() {
 
     return (
         <nav className={styles.all}>
-            <div className={styles.logos}> <p>Corizo  : Ideassion : LUGVITC's</p></div>
+            <div className={styles.logos}> <p>Ideassion : LUGVITC's</p></div>
             <div className={styles.name}>Password : Capture.Survive.Escape</div>
             <div className={styles.links}>
                 {links.map(link => (
