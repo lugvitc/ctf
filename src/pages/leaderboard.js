@@ -9,14 +9,23 @@ export default function Leaderboard() {
     const [teams, setTeams] = useState(null);
     const { apiPostGetJsonAsTeam } = useFetch();
 
-    useEffect(() => {
+    const fetchLeaderboardData = () => {
         const fetchTeams = async () => {
             const data = await apiPostGetJsonAsTeam('/ctf/teams');
             setTeams(data.teams);
-            console.log(teams);
+            console.log(data.teams);
         };
         fetchTeams();
+    }
+
+    useEffect(() => {
+        fetchLeaderboardData();
+
+        // Specify the refresh interval in milliseconds (e.g., 10 seconds = 10000 ms)
+        const refreshInterval = setInterval(fetchLeaderboardData, 10000);
+        return () => clearInterval(refreshInterval);
     }, []);
+
 
     return (
         <>
