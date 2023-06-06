@@ -23,6 +23,7 @@ function ChallengeModal({
     qWasCorrect,
     ques_no
 }) {
+    console.log(challenge.is_hint);
 
     const [showAlert, setShowAlert] = useState(false);
 
@@ -164,7 +165,8 @@ function ChallengeModal({
         />
       )}
                 <div className={styles.hints}>
-                    <button
+                    
+                {(challenge.is_hint[0])  &&   <button
                         className='form-nav-button'
                         onClick={() => {
                             console.log(ques_no);
@@ -181,12 +183,13 @@ function ChallengeModal({
                         }}
                     >
                         Hint 1
-                    </button>
-                    {showHints.hint1 && (
+                    </button>} 
+                    
+                    { (challenge.is_hint[0])&&  showHints.hint1 && (
                         <div className={styles.hintText}>{hint_1}</div>
                     )}
                     <div className={styles.hintSpacing}></div> {/* Add spacing */}
-                    <button
+                    {(challenge.is_hint[1]) && <button
                         className='form-nav-button'
                         onClick={() => {
                             console.log(ques_no);
@@ -203,12 +206,14 @@ function ChallengeModal({
                         }}
                     >
                         Hint 2
-                    </button>
-                    {showHints.hint2 && (
+                    </button>}
+                    
+                    {(challenge.is_hint[1]) && showHints.hint2 && (
                         <div className={styles.hintText}>{hint_2}</div>
                     )}
                     <div className={styles.hintSpacing}></div>
-                    <button
+                
+                    {(challenge.is_hint[2]) && <button
                         className='form-nav-button'
                         onClick={() => {
                             console.log(ques_no);
@@ -225,13 +230,89 @@ function ChallengeModal({
                         }}
                     >
                         Hint 3
-                    </button>
-                    {showHints.hint3 && (
+                    </button>}
+                    { (challenge.is_hint[2]) && showHints.hint3 && (
                         <div className={styles.hintText}>
                             {hint_3}
                         </div>
                     )}
                 </div>
+                {/*  */}
+
+                {/* <div className={styles.hints}>
+                    
+                    <button
+                       className='form-nav-button'
+                       onClick={() => {
+                           console.log(ques_no);
+                           apiPostAsTeam("/ctf/getHint", {
+                                   hint: 0,
+                                   challenge_id: ques_no
+                           })
+                               .then(res => res.json())
+                               .then((data) => {
+                                   let hint = data["hint"];
+                                   setShowHints({ ...showHints, hint1: true });
+                                   setHint1(hint);
+                               });
+                       }}
+                   >
+                       Hint 1
+                   </button> 
+                   
+                   {showHints.hint1 && (
+                       <div className={styles.hintText}>{hint_1}</div>
+                   )}
+                   <div className={styles.hintSpacing}></div> 
+                   <button
+                       className='form-nav-button'
+                       onClick={() => {
+                           console.log(ques_no);
+                           apiPostAsTeam("/ctf/getHint", {
+                                   hint: 1,
+                                   challenge_id: ques_no
+                           })
+                               .then(res => res.json())
+                               .then((data) => {
+                                   let hint = data["hint"];
+                                   setShowHints({ ...showHints, hint2: true });
+                                   setHint2(hint);
+                               });
+                       }}
+                   >
+                       Hint 2
+                   </button>
+                   
+                   {showHints.hint2 && (
+                       <div className={styles.hintText}>{hint_2}</div>
+                   )}
+                   <div className={styles.hintSpacing}></div>
+               
+                   <button
+                       className='form-nav-button'
+                       onClick={() => {
+                           console.log(ques_no);
+                           apiPostAsTeam("/ctf/getHint", {
+                                   hint: 2,
+                                   challenge_id: ques_no
+                           })
+                               .then(res => res.json())
+                               .then((data) => {
+                                   let hint = data["hint"];
+                                   setShowHints({ ...showHints, hint3: true });
+                                   setHint3(hint);
+                               });
+                       }}
+                   >
+                       Hint 3
+                   </button>
+                   {showHints.hint3 && (
+                       <div className={styles.hintText}>
+                           {hint_3}
+                       </div>
+                   )}
+               </div> */}
+                {/*  */}
             </>
         </dialog>
         </>
