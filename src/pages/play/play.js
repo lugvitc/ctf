@@ -42,7 +42,7 @@ return (
         <h2>Instructions</h2>
         <p>
             The file/link in every challenge hides a flag, which is a string
-            of the format <code>{'rtf_{...}'}</code>
+            of the format <code>{'passwd{...}'}</code>
         </p>
         <h2>Challenges</h2>
         <div className={styles.checkboxContainer}>
