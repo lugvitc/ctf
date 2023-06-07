@@ -117,6 +117,10 @@ function ChallengeModal({
                 </div>
                 <div className={styles.grid}>
                     <div className={styles.description}>
+                        <br />
+                        <span className={styles.author}>Author : {challenge.created_by}</span>
+                       <br /><br />
+                       Description:
                         <ReactMarkdown
                             components={{
                                 a: props => (
@@ -132,11 +136,15 @@ function ChallengeModal({
                             {/* links added */}
                             {/* dhananjay added above with meetesh */}
                         </ReactMarkdown>
+
                         <div className={styles.ctfLinks}>
                             {challenge.links.map((item)=>
                                 <a href={item.link} style={myStyle} >{item.name}</a>
                             )}
                         </div>
+
+                        {/* <div className={styles.hintSpacing}></div> */}
+                            
                         Solved by {challenge.solvedBy.length} teams
                     </div>
                 </div>
