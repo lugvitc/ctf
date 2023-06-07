@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 import "./styles.css";
-import { FiPlus } from "react-icons/fi";
+import { HiArrowSmDown } from "react-icons/hi";
 
 export default function FaqComponent(props) {
   const [active, setActive] = useState(false);
@@ -29,7 +29,7 @@ export default function FaqComponent(props) {
                 <h4 className="question-style">
                  {props.que}
                 </h4>
-                <FiPlus
+                <HiArrowSmDown
                   className={active ? `question-icon rotate` : `question-icon`}
                 />
               </div>
