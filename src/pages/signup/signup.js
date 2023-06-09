@@ -118,8 +118,6 @@ export default function Signup() {
                     <label> * Registration Number (Member 1): </label>
                     <input
                         type='text'
-                        maxLength='9'
-                        pattern='\d{2}[a-zA-Z]{3}\d{4}'
                         onChange={handleChange('member1RegNo')}
                         value={teamValues.member1RegNo}
                         className={
@@ -135,8 +133,6 @@ export default function Signup() {
                     <label> Registration Number (Member 2): </label>
                     <input
                         type='text'
-                        maxLength='9'
-                        pattern='\d{2}[a-zA-Z]{3}\d{4}'
                         onChange={handleChange('member2RegNo')}
                         value={teamValues.member2RegNo}
                         className={
@@ -153,8 +149,6 @@ export default function Signup() {
                     <label> Registration Number (Member 3): </label>
                     <input
                         type='text'
-                        maxLength='9'
-                        pattern='\d{2}[a-zA-Z]{3}\d{4}'
                         onChange={handleChange('member3RegNo')}
                         value={teamValues.member3RegNo}
                         className={
