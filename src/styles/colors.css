@@ -24,4 +24,11 @@
     --nord13: #ebcb8b; /* yellow */
     --nord14: #a3be8c; /* green */
     --nord15: #b48ead; /* purple */
+
+    /*Border radius */
+    --nord16 : 1.5rem;
+    --nord17 : 2rem;
+    --nord18 : 1rem;
+    --nord19 : 3rem;
+    --nord20 : 0.5rem;
 }
