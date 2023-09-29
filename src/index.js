@@ -28,9 +28,9 @@ root.render(
                     <Route
                         path='/play'
                         element={
-                            <LoggedInRoute>
+                            
                                 <Play />
-                            </LoggedInRoute>
+                            
                         }
                     />
                     <Route
