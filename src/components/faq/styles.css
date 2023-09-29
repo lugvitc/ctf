@@ -1,5 +1,5 @@
 .App {
-    font-family: sans-serif;
+    font-family: var(--fonth);
     text-align: center;
     margin: 10px;
   }
@@ -29,6 +29,7 @@
   .question-styling {
     font-size: 17px;
     width: 100%;
+    font-family: var(--fonth);
   }
   
   .question-icon {
