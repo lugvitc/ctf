@@ -8,6 +8,7 @@ import innovationCouncilLogo from './innovationCouncil.jpeg'
 import qr from './qr.png';
 import React from 'react';
 import FaqComponent from '../../components/faq/faq';
+import technoVITLogo from './technoVITLogo.jpeg'
 
 import AnimateDL from './animateDL/animateDL';
 
@@ -17,12 +18,14 @@ export default function Landing() {
             <section className={styles.section}>
                 <div className={styles.logoRow}>
                     <div className={styles.center}>
-                        <h3 className={styles.sponsors}>SPONSORS</h3>
+                        <h3 className={styles.sponsors}>ORGANIZERS</h3>
                         <div className={styles.horizontal}>
                             <img className={styles.logo} src={vitLogo} />
+                            <img className = {styles.logo} src={technoVITLogo}/>
                             <img className={styles.logo}  src={qubitLogo} />
                             <img className={styles.logo} src={lugLogo} />
                             <img className={styles.logo} src={innovationCouncilLogo} /> 
+                            
 
                         </div>    
                     </div>
