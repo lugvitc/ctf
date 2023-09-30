@@ -6,7 +6,7 @@ import lugLogo from './lug.png';
 import vitLogo from './vit.png';
 import ideassionLogo from './ideassion.png';
 import technovitLogo from './technovit.png';
-import qr from './qr.png';
+import qr from './qr2.png';
 import FaqComponent from '../../components/faq/faq';
 
 import AnimateDL from './animateDL/animateDL';
