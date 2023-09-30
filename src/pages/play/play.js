@@ -72,13 +72,17 @@ export default function Play() {
 return (
     <>
 
+
+
+
+
     <div className="playTime">
 
-        <h1>Play</h1>
+        <h1 className={`${styles.playTimePlay}`}>Play</h1>
         <h2>Instructions</h2>
         <p>
             The file/link in every challenge hides a flag, which is a string
-            of the format <code>{'passwd{...}'}</code>
+            of the format <blockquote className={`${styles.pointer}`}><code className={`${styles.flag}`}>{'passwd{...}'}</code></blockquote> 
         </p>
         <h2>Challenges</h2>
         <div className={styles.checkboxContainer}>
