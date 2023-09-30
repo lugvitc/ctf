@@ -22,10 +22,12 @@ export const days = [
     {
         day: (
             <>
-                6<sup>th</sup> October,2023 [9:00 AM to 6:00 PM]
+                <b>Day 1: Comprehensive Linux Workshop + Quiz</b>
             </>
         ),
         schedule: [
+            { description: 'Date: October 6th, 2023' },
+            { description: 'Time: 9:00 AM to 6:00 PM' },
             { description: "On the inaugural day, participants will dive into a comprehensive hands-on workshop designed to equip them with a solid foundation in Linux, a fundamental skill for anyone venturing into the world of cybersecurity." },
             { description: "This workshop will take participants through an in-depth exploration of Linux, structured chapter by chapter. Key topics covered include Linux fundamentals, which serve as the backbone of various server systems, and cryptography, the cornerstone of secure communication and data protection, ensuring confidentiality, integrity, and authentication." },
             { description: "Participants will also delve into OSINT (Open-source Intelligence) and reconnaissance techniques, essential for gathering information about potential targets." },
@@ -36,12 +38,28 @@ export const days = [
     {
         day: (
             <>
-                6<sup>th</sup> to 7<sup>th</sup> October,2023 [7:00 AM to 7:00 PM]
+                <b>Round 2: Overnight Capture The Flag (CTF) Challenge (Top 20 Teams)</b>
             </>
         ),
         schedule: [
+            { description: 'Date: October 6th, 2023, to October 7th, 2023'},
+            { description: 'Time: 7:00 PM to 7:00 AM (Overnight)' },
             { description: 'The top 20 teams from Round 1 will participate in the thrilling Capture The Flag (CTF) challenge. This overnight competition will test their practical skills in cybersecurity and ethical hacking, simulating real-world scenarios.' },
             { description: 'Participants will work tirelessly throughout the night to solve complex challenges and demonstrate their prowess in the field.' }
+        ]
+    },
+    {
+        day: (
+            <>
+                <b>Round 3: Grand Finale - Treasure Hunt (Top 10 Teams)</b>
+            </>
+            ),
+        schedule: [
+            { description: 'Date: 7th, October, 2023' },
+            { description: 'Time: 7:30 AM to 8:30 AM '},
+            { description: 'The top 10 teams emerging from the Overnight CTF will engage in the Grand Finale - Treasure Hunt.'},
+            { description: 'This challenging event will require teams to use their expertise to solve complex puzzles and challenges, aiming to secure victory.'},
+            { description: 'The Treasure Hunt promises an exhilarating climax to the event.'}
         ]
     },
 ];
