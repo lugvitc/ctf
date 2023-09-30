@@ -5,6 +5,7 @@ import { faqs, days, info } from './content';
 import lugLogo from './lug.png';
 import vitLogo from './vit.png';
 import ideassionLogo from './ideassion.png';
+import technovitLogo from './technovit.png';
 import qr from './qr.png';
 import FaqComponent from '../../components/faq/faq';
 
@@ -19,7 +20,7 @@ export default function Landing() {
                     <div className={styles.center}>
                         <h3 className={styles.sponsors}>SPONSORS</h3>
                         <div>
-                            <img className={styles.logo} style={{ width: "200px", height: "auto" }} src={ideassionLogo} />
+                            <img className={styles.logo} style={{ width: "200px", height: "auto" }} src={technovitLogo} />
                         </div>
                     </div>
                     <img className={styles.logo} src={lugLogo} />
