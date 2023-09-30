@@ -147,7 +147,7 @@
 
 @media only screen and (max-width: 1000px) {
     .title {
-        font-size: 5rem;
+        font-size: 3rem;
     }
     .infoCards {
         flex-direction: column;
@@ -160,7 +160,7 @@
 
 @media only screen and (max-width: 700px) {
     .title {
-        font-size: 4rem;
+        font-size: 2rem;
     }
     .logo {
         height: 5rem;
@@ -172,7 +172,7 @@
 
 @media only screen and (max-width: 500px) {
     .title {
-        font-size: 3rem;
+        font-size: 1rem;
     }
     .logo {
         width: fit-content;

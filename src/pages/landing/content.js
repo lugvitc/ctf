@@ -13,7 +13,7 @@ export const faqs = [
     { q: 'Will the participants be provided with Internet connection?', a: 'Yes, a Wi-Fi connection will be provided for the participants.' },
     { q: 'Is this a team event?', a: 'Yes it is a team event comprising of 1-3 members.' },
     { q: 'How to register as a team?', a: 'Every participant has to register individually for the event. Team formation will happen on the event day. You may find your team mates earlier if you wish to.' },
-    { q: 'What are the winners prizes?', a: 'Prizes worth Rs. 10,000+.' },
+    { q: 'What are the winners prizes?', a: 'Prizes worth Rs. 10,000+, certificates, hands-on experience, and a wealth of knowledge to enhance their cybersecurity expertise.' },
     { q: 'Where do we register for the event?', a: 'You can scan the QR Code in the top of the page or visit https://vitchennaievents.com/conf1/ to register for the event.' }
 ];
 
