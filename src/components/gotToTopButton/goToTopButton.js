@@ -1,3 +1,4 @@
+import React from 'react';
 import UpArrowIcon from './upArrowIcon';
 import './goToTopButton.css';
 import { useEffect, useState } from 'react';

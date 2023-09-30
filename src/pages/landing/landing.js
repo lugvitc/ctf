@@ -1,3 +1,4 @@
+import React from 'react';
 import styles from './landing.module.css';
 import { faqs, days, info } from './content';
 
@@ -5,7 +6,6 @@ import lugLogo from './lug.png';
 import vitLogo from './vit.png';
 import ideassionLogo from './ideassion.png';
 import qr from './qr.png';
-import React from 'react';
 import FaqComponent from '../../components/faq/faq';
 
 import AnimateDL from './animateDL/animateDL';
@@ -94,7 +94,7 @@ export default function Landing() {
                         dd={
                             <ul>
                                 <li>Ansh Sharma: +919540018950</li>
-
+                                <li>Shaina: +918925785445</li>
                             </ul>
                         }
                     />
@@ -103,7 +103,7 @@ export default function Landing() {
                         dd={
                             <ul>
                                 <li>Dr. Gayathri R.</li>
-                                <li>Dr. Rajiv Vincent</li>
+                                <li>Dr. Mary Shamala L</li>
                             </ul>
                         }
                     />
