@@ -20,9 +20,10 @@ export default function Landing() {
                         <h3 className={styles.sponsors}>SPONSORS</h3>
                         <div className={styles.horizontal}>
                             <img className={styles.logo} src={vitLogo} />
-                            <img className={styles.logo} style={{width: "150px", height: "100px", marginTop: "50px"}} src={innovationCouncilLogo} /> 
+                            <img className={styles.logo} style={{ height: "100px",aspectRatio: "16/9" ,marginTop: '50px' }} src={qubitLogo} />
                             <img className={styles.logo} src={lugLogo} />
-                            <img className={styles.logo} style={{ width: "150px", height: "100px", marginTop: '50px' }} src={qubitLogo} />
+                            <img className={styles.logo} style={{ height: "100px",aspectRatio: "16/9", marginTop: "50px"}} src={innovationCouncilLogo} /> 
+
                         </div>    
                     </div>
                     
