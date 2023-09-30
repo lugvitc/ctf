@@ -27,13 +27,27 @@
 
 .logo {
     height: 10rem;
-    display: block;
+    display:flex ;
+    flex-wrap:wrap ;
+    margin: 10px 0px;
+
 }
 .center{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
+    margin: 0px auto;
+
+}
+.horizontal {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-between;
+    gap: 100px;
 }
 
 .sponsors{
@@ -41,6 +55,8 @@
     font-size: 20px;
     font-family: 'Nunito', sans-serif;
     letter-spacing: 8px;
+    display: flexbox;
+    padding-bottom: 50px;
 }
 .title {
     letter-spacing: 10px;
@@ -136,6 +152,10 @@
     .infoCards {
         flex-direction: column;
     }
+    .horizontal {
+        gap: 0em;
+        margin: 0px 100px;
+    }
 }
 
 @media only screen and (max-width: 700px) {
@@ -144,6 +164,9 @@
     }
     .logo {
         height: 5rem;
+    }
+    .horizontal {
+        gap: 0.1em;
     }
 }
 
@@ -154,6 +177,9 @@
     .logo {
         width: fit-content;
         height: 3rem;
+    }
+    .horizontal {
+        gap: 50px;
     }
 }
 

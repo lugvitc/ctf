@@ -3,7 +3,8 @@ import { faqs, days, info } from './content';
 
 import lugLogo from './lug.png';
 import vitLogo from './vit.png';
-import ideassionLogo from './ideassion.png';
+import qubitLogo from './qubit.jpeg';
+import innovationCouncilLogo from './innovationCouncil.jpeg'
 import qr from './qr.png';
 import React from 'react';
 import FaqComponent from '../../components/faq/faq';
@@ -15,14 +16,16 @@ export default function Landing() {
         <div className={styles.all}>
             <section className={styles.section}>
                 <div className={styles.logoRow}>
-                    <img className={styles.logo} src={vitLogo} />
                     <div className={styles.center}>
                         <h3 className={styles.sponsors}>SPONSORS</h3>
-                        <div>
-                            <img className={styles.logo} style={{ width: "200px", height: "auto" }} src={ideassionLogo} />
-                        </div>
+                        <div className={styles.horizontal}>
+                            <img className={styles.logo} src={vitLogo} />
+                            <img className={styles.logo} style={{width: "150px", height: "100px", marginTop: "50px"}} src={innovationCouncilLogo} /> 
+                            <img className={styles.logo} src={lugLogo} />
+                            <img className={styles.logo} style={{ width: "150px", height: "100px", marginTop: '50px' }} src={qubitLogo} />
+                        </div>    
                     </div>
-                    <img className={styles.logo} src={lugLogo} />
+                    
 
                 </div>
 
@@ -94,6 +97,7 @@ export default function Landing() {
                         dd={
                             <ul>
                                 <li>Ansh Sharma: +919540018950</li>
+                                <li>Shaina: +918925785445</li>
 
                             </ul>
                         }
@@ -102,8 +106,8 @@ export default function Landing() {
                         dt={'Faculty Coordinators'}
                         dd={
                             <ul>
-                                <li>Dr. Gayathri R.</li>
-                                <li>Dr. Rajiv Vincent</li>
+                                <li>Dr. Gayathri R. : +919597300373</li>
+                                <li>Dr. L. Mary Shamala: +919442516171</li>
                             </ul>
                         }
                     />
@@ -113,14 +117,14 @@ export default function Landing() {
                             <>
                                 Linux Club:
                                 <ul>
-                                    <li>Email: <a href='mailto:cclinuxclub@vit.ac.in'>cclinuxclub@vit.ac.in</a></li>
-                                    <li>
+                                    <li>Mail : <a href='mailto:cclinuxclub@vit.ac.in'>cclinuxclub@vit.ac.in</a></li>
+                                    <li> IG : 
                                         <a
                                             href='https://www.instagram.com/lugvitc/'
                                             target='_blank'
                                             rel='noreferrer'
                                         >
-                                            Instagram
+                                             Instagram
                                         </a>
                                     </li>
                                     <li>
