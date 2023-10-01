@@ -5,6 +5,7 @@
     overflow-y: scroll; */
     font-size: x-large;
     overflow-wrap: break-word;
+
 }
 
 .section {
@@ -12,6 +13,7 @@
     flex-direction: column;
     /* justify-content: center; */
     align-items: center;
+    font-family: var(--fonth);
     /* scroll-snap-align: start; */
 }
 
@@ -39,7 +41,7 @@
 .sponsors{
     color: var(--nord12);
     font-size: 20px;
-    font-family: 'Nunito', sans-serif;
+    font-family: var(--fonth);
     letter-spacing: 8px;
 }
 .title {
@@ -82,6 +84,7 @@
     border-radius: var(--nord17);
     display: grid;
     place-items: center;
+    font-family: var(--fonth);
 }
 
 .infoCards > *:nth-child(2n + 1) {
@@ -108,14 +111,22 @@
 .dl {
     padding-inline: 1rem;
     width: calc(100% - 2rem);
+/* <<<<<<< consistent-styling-rounded
     border-radius: var(--nord16);
     
+======= */
+    font-family: var(--fonth);
+/* >>>>>>> master */
 }
 .dl li{
     list-style-position: outside;
     text-indent: -1.5em;
     padding-left: 1.5em;
+/* <<<<<<< consistent-styling-rounded
     border-radius: var(--noed16);
+======= */
+    font-family: var(--fontc);
+/* >>>>>>> master */
     
 }
 .dl > dt {

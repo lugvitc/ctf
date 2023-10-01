@@ -1,3 +1,6 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,300;6..12,400&family=Open+Sans:wght@500&display=swap');
+
 :root {
     --header-footer-black: #212529;
 
@@ -25,10 +28,16 @@
     --nord14: #a3be8c; /* green */
     --nord15: #b48ead; /* purple */
 
+/* <<<<<<< consistent-styling-rounded */
     /*Border radius */
-    --nord16 : 1.5rem;
+/*     --nord16 : 1.5rem;
     --nord17 : 2rem;
     --nord18 : 1rem;
     --nord19 : 3rem;
-    --nord20 : 0.5rem;
+    --nord20 : 0.5rem; */
+/* ======= */
+    --fontc: 'Nunito Sans', sans-serif; /* Use Nunito Sans or fallback to a generic sans-serif font */
+    --fonth: 'Open Sans', sans-serif;
+/* >>>>>>> master */
 }
+

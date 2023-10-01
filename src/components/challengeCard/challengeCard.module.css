@@ -1,8 +1,9 @@
 .card {
     background-color: var(--nord2);
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
     padding: 1.6rem;
-    /* border-radius: 0.5rem; */
+    /* width: 12rem; */
+    border-radius: 1rem;
     cursor: pointer;
 }
 
@@ -18,9 +19,11 @@
     justify-content: space-between;
     margin-bottom: 1.6rem;
     border-bottom: 1px solid;
+    font-family: var(--fonth);
 }
 
 .description {
     word-wrap: break-word;
+    font-family: var(--fontc);
 }
 
