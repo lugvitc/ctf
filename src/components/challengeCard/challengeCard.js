@@ -16,7 +16,8 @@ export default function ChallengeCard({ challenge, isSolved, qWasCorrect, ques_n
 
     return (
         <>
-            {!isSolved && (
+        {/* when challenge is not solved */}
+            {/* {!isSolved && (
                 // <ChallengeModal
                 //     challenge={challenge}
                 //     modalRef={modalRef}
@@ -26,8 +27,10 @@ export default function ChallengeCard({ challenge, isSolved, qWasCorrect, ques_n
                 //     qWasCorrect={qWasCorrect}
                 //     ques_no={ques_no}
                 // />
-                <div></div>
-            )}
+
+                // <div></div>
+            
+            )} */}
             <div
                 className={`${styles.card} ${isSolved ? styles.solved : ''}`}
                 onClick={openQuestionModal}
