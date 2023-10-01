@@ -22,11 +22,13 @@
 
 .description {
     word-wrap: break-word;
+    font-family: var(--fontc);
 }
 
 .header {
     display: flex;
     align-items: center;
+    font-family: var(--fonth);
 }
 
 .name {

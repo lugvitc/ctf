@@ -1,5 +1,33 @@
 @import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
 .challenges {
+/* <<<<<<< font-styling
+    display: flex;
+    flex-direction: column;
+    gap: 0rem;
+    margin-left: -1rem;
+  }
+  
+  .challengesGrid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .challengesGrid > * {
+    flex: 0 0 calc(25% - 2rem);
+    margin-bottom: 1rem;
+    margin-right: 1rem;
+    
+  }
+  
+  .centerContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1rem;
+  }
+  
+======= */
   display: flex;
   flex-direction: column;
   gap: 0rem;
@@ -37,3 +65,4 @@
 .flag{
   font-size: 1rem;
 }
+/* >>>>>>> master */

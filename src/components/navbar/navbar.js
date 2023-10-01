@@ -20,8 +20,12 @@ export default function Navbar() {
 
     return (
         <nav className={styles.all}>
+// <<<<<<< font-styling
+//             <div className={styles.name}>Cyber-0-Day</div>
+// =======
             <div className={styles.logos}> <p>TechnoVIT : LUGVITC's</p></div>
             <div className={styles.name}>Cyber-0-Day 2.0 : Uncover.Adapt.Triumph</div>
+// >>>>>>> master
             <div className={styles.links}>
                 {links.map(link => (
                     <NavLink

@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 .all {
     background-color: var(--header-footer-black);
     padding-left: 1em;
@@ -9,12 +10,15 @@
 .logos {
     padding: 1rem 0.5rem;
     font-weight: bold;
+    font-family: var(--fonth);
 }
 
 .name {
     padding: 2rem 0.5rem;
     margin-left: auto;
     font-weight: bold;
+    font-family: 'Press Start 2P', cursive;
+    font-size: medium;
 
 }
 
@@ -31,6 +35,7 @@
     color: var(--nord5);
     text-decoration: none;
     cursor: pointer;
+    font-family: var(--fonth);
 }
 
 .link:hover {

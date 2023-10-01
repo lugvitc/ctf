@@ -19,9 +19,11 @@
     justify-content: space-between;
     margin-bottom: 1.6rem;
     border-bottom: 1px solid;
+    font-family: var(--fonth);
 }
 
 .description {
     word-wrap: break-word;
+    font-family: var(--fontc);
 }
 
