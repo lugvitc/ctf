@@ -1,4 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
 .challenges {
+/* <<<<<<< font-styling
     display: flex;
     flex-direction: column;
     gap: 0rem;
@@ -25,3 +27,42 @@
     margin-top: 1rem;
   }
   
+======= */
+  display: flex;
+  flex-direction: column;
+  gap: 0rem;
+  margin-left: -1rem;
+}
+.playTimePlay{
+  font-family: 'Press Start 2P', cursive;
+  font-weight: 700;
+}
+
+.challengesGrid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 90%;
+}
+
+.challengesGrid > * {
+  flex: 0 0 calc(25rem);
+  margin-bottom: 1rem;
+  margin-right: 1rem;
+}
+
+.centerContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1rem;
+}
+.pointer{
+  box-shadow: rgb(158, 158, 158) 3px 0px 0px 0px inset; 
+  padding-left: 23px; 
+  margin-bottom: 2rem;
+}
+.flag{
+  font-size: 1rem;
+}
+/* >>>>>>> master */
