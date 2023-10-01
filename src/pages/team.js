@@ -1,3 +1,4 @@
+import React from 'react';
 import LoadingAnimation from '../components/loadingAnimation/loadingAnimation';
 import useTeam from '../hooks/useTeam';
 

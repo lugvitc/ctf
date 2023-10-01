@@ -1,3 +1,4 @@
+import React from 'react';
 import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import useTeam from '../../hooks/useTeam';
@@ -19,8 +20,8 @@ export default function Navbar() {
 
     return (
         <nav className={styles.all}>
-            <div className={styles.logos}> <p>Ideassion : LUGVITC's</p></div>
-            <div className={styles.name}>Password : Capture.Survive.Escape</div>
+            <div className={styles.logos}> <p>TechnoVIT : LUGVITC's</p></div>
+            <div className={styles.name}>Cyber-0-Day 2.0 : Uncover.Adapt.Triumph</div>
             <div className={styles.links}>
                 {links.map(link => (
                     <NavLink

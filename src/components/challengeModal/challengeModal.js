@@ -1,8 +1,17 @@
-import { useState, useEffect } from "react";
-import styles from "./challengeModal.module.css";
-import useFetch from "../../hooks/useFetch";
-import ReactMarkdown from "react-markdown";
-import PopAlert from "../popAlert/popAlert";
+// <<<<<<< error-modal
+// import { useState, useEffect } from "react";
+// import styles from "./challengeModal.module.css";
+// import useFetch from "../../hooks/useFetch";
+// import ReactMarkdown from "react-markdown";
+// import PopAlert from "../popAlert/popAlert";
+// =======
+import React from 'react';
+import { useState, useEffect } from 'react';
+import styles from './challengeModal.module.css';
+import useFetch from '../../hooks/useFetch';
+import ReactMarkdown from 'react-markdown';
+import PopAlert from '../popAlert/popAlert';
+// >>>>>>> master
 
 import LoadingAnimation from "../loadingAnimation/loadingAnimation";
 import ErrorModal from "../errorModals/errorModal";
