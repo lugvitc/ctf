@@ -40,7 +40,7 @@
 .lug-form input,
 .lug-form textarea,
 .lug-form select {
-    border-radius: 10px;
+    border-radius: var(--nord20);
     border: none;
     background-color: var(--nord4);
     height: 2rem;
@@ -79,7 +79,7 @@
     background-color: var(--nord3);
     color: var(--nord6);
     border-color: var(--nord3);
-    border-radius: 10px;
+    border-radius: var(--nord18);
     display: flex;
     padding: 5px 10px;
     font-family: var(--fonth);
