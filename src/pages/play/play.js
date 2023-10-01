@@ -13,41 +13,41 @@ export default function Play() {
     const [challenges, setChallenges] = useState(null);
     const [showSolvedChallenges, setShowSolvedChallenges] = useState(false);
 
-    //const { apiPostGetJsonAsTeam } = useFetch();
-    //const { team, logoutTeam, fetchTeam } = useTeam();
-    var team = {
-        "name": "Mere se bada chutiya"
-    };
-    const apiPostGetJsonAsTeam = async (url) => {
-        return {
-            "challenges": [{
-                "id": "gm",
-                "solvedBy": [],
-                "name": "test",
-                "points": 100
-            }, {
-                "id": "gm",
-                "solvedBy": [],
-                "name": "test",
-                "points": 100
-            }, {
-                "id": "gm",
-                "solvedBy": [],
-                "name": "test",
-                "points": 100
-            }, {
-                "id": "gm",
-                "solvedBy": [],
-                "name": "test",
-                "points": 100
-            }, {
-                "id": "gm",
-                "solvedBy": [],
-                "name": "test",
-                "points": 100
-            }]
-        }
-    }
+    const { apiPostGetJsonAsTeam } = useFetch();
+    const { team, logoutTeam, fetchTeam } = useTeam();
+    // var team = {
+    //     "name": "Test"
+    // };
+    // const apiPostGetJsonAsTeam = async (url) => {
+    //     return {
+    //         "challenges": [{
+    //             "id": "gm",
+    //             "solvedBy": [],
+    //             "name": "test",
+    //             "points": 100
+    //         }, {
+    //             "id": "gm",
+    //             "solvedBy": [],
+    //             "name": "test",
+    //             "points": 100
+    //         }, {
+    //             "id": "gm",
+    //             "solvedBy": [],
+    //             "name": "test",
+    //             "points": 100
+    //         }, {
+    //             "id": "gm",
+    //             "solvedBy": [],
+    //             "name": "test",
+    //             "points": 100
+    //         }, {
+    //             "id": "gm",
+    //             "solvedBy": [],
+    //             "name": "test",
+    //             "points": 100
+    //         }]
+    //     }
+    // }
     const fetchChallenges = async () => {
         const data = await apiPostGetJsonAsTeam('/ctf/challenges');
         setChallenges(data.challenges);
@@ -63,7 +63,7 @@ export default function Play() {
 
     const qWasCorrect = () => {
         fetchChallenges();
-        //fetchTeam();
+        fetchTeam();
     };
 
 
