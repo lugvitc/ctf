@@ -1,3 +1,4 @@
+import React from 'react';
 import { useState, useEffect } from 'react';
 import styles from './challengeModal.module.css';
 import useFetch from '../../hooks/useFetch';
