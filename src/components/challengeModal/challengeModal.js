@@ -11,6 +11,7 @@ import styles from './challengeModal.module.css';
 import useFetch from '../../hooks/useFetch';
 import ReactMarkdown from 'react-markdown';
 import PopAlert from '../popAlert/popAlert';
+
 // >>>>>>> master
 
 import LoadingAnimation from "../loadingAnimation/loadingAnimation";
@@ -89,8 +90,11 @@ function ChallengeModal({
         setLoading(false);
       }
     } catch (error) {
-      <ErrorModal error={error.message} open={true} />;
       setLoading(false);
+      return (
+        
+        <ErrorModal error={error.message} open={true} />
+        )
     }
   };
 
