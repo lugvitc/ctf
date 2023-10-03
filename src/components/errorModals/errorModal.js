@@ -1,4 +1,5 @@
 import styles from "./errorModal.module.css";
+import React from 'react'
 
 function ErrorModal({ error, open }) {
   return (
