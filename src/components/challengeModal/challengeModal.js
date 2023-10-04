@@ -97,6 +97,49 @@ function ChallengeModal({
         )
     }
   };
+  const startLab = async () => {
+        const res = await apiPostAsTeam('api/ctf/start', {
+            challenge_id: challenge.id
+        });
+        try {
+            setLoading(true);
+            const data = await res.json();
+            if (data.msg === undefined) {
+                console.log('good!');
+                setPortNumber(data.port);
+                setStartLabVal(true);
+            } else {
+                
+                handleShowAlert();
+                setLoading(false);
+            }
+        } catch {
+            alert('error');
+            setLoading(false);
+        }
+    };
+
+    const stopLab = async () => {
+        const res = await apiPostAsTeam('api/ctf/stop', {
+            challenge_id: challenge.id
+        });
+        try {
+            setLoading(true);
+            const data = await res.json();
+            if (data.msg === undefined) {
+                console.log('good!');
+                setPortNumber('');
+                setStartLabVal(false);
+            } else {
+                handleShowAlert();
+                setLoading(false);
+            }
+        } catch {
+            alert('error');
+            setLoading(false);
+        }
+    };
+  
 
   useEffect(() => {
     const closeIfClickedOutside = (e) => {
