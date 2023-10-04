@@ -1,7 +1,7 @@
 {
-  "main.css": "/ctf/static/css/main.f946a74c.chunk.css",
-  "main.js": "/ctf/static/js/main.66dab2be.chunk.js",
-  "main.js.map": "/ctf/static/js/main.66dab2be.chunk.js.map",
+  "main.css": "/ctf/static/css/main.b50c7f34.chunk.css",
+  "main.js": "/ctf/static/js/main.e70e45d0.chunk.js",
+  "main.js.map": "/ctf/static/js/main.e70e45d0.chunk.js.map",
   "static/js/1.52f95982.chunk.js": "/ctf/static/js/1.52f95982.chunk.js",
   "static/js/1.52f95982.chunk.js.map": "/ctf/static/js/1.52f95982.chunk.js.map",
   "runtime~main.js": "/ctf/static/js/runtime~main.06a9c1d0.js",
@@ -11,8 +11,8 @@
   "static/media/technovit.png": "/ctf/static/media/technovit.f568c299.png",
   "static/media/qr2.png": "/ctf/static/media/qr2.4249c200.png",
   "static/media/ideassion.png": "/ctf/static/media/ideassion.3bdc15a7.png",
-  "static/css/main.f946a74c.chunk.css.map": "/ctf/static/css/main.f946a74c.chunk.css.map",
+  "static/css/main.b50c7f34.chunk.css.map": "/ctf/static/css/main.b50c7f34.chunk.css.map",
   "index.html": "/ctf/index.html",
-  "precache-manifest.f0b8b78ab1d83924e66a80923b4701cf.js": "/ctf/precache-manifest.f0b8b78ab1d83924e66a80923b4701cf.js",
+  "precache-manifest.74b57fa425ba21b42d72331a35f428ec.js": "/ctf/precache-manifest.74b57fa425ba21b42d72331a35f428ec.js",
   "service-worker.js": "/ctf/service-worker.js"
 }
