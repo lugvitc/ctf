@@ -7,6 +7,7 @@ import useTeam from '../hooks/useTeam';
 
 export default function Login() {
     const [loginValues, setLoginValues] = useState({
+        user: '',
         name: '',
         password: ''
     });
@@ -51,12 +52,24 @@ export default function Login() {
                         <div className='form-start'> Login </div>
 
                         <div className='form-field'>
+                            <label> Username:  </label>
+                            <input
+                                type='text'
+                                maxLength='128'
+                                onChange={handleChange('user')}
+                                value={loginValues.user}
+                                className='text'
+                            />
+                        </div>
+
+                        <div className='form-field'>
                             <label> Group Name: </label>
                             <input
                                 type='text'
                                 maxLength='128'
                                 onChange={handleChange('name')}
                                 value={loginValues.name}
+                                className='text'
                             />
                         </div>
 
@@ -67,6 +80,7 @@ export default function Login() {
                                 maxLength='16'
                                 onChange={handleChange('password')}
                                 value={loginValues.password}
+                                className='text'
                             />
                         </div>
                         <div className='form-end'>
