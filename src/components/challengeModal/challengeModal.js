@@ -58,8 +58,6 @@ function ChallengeModal({
     hint3: false,
   });
 
-  const [PortNumber, setPortNumber] = useState(null);
-  const [StartLabVal, setStartLabVal] = useState(false);
 
 
   function inputChangeHandler(event) {
@@ -101,6 +99,18 @@ function ChallengeModal({
         )
     }
   };
+
+  const tooglePort =()=>{
+    if (BtnState=="Start") {
+      startLab()
+      setBtnState("Stop");
+    }
+    else{
+      stopLab();
+      setBtnState("Start");
+    }
+  }
+
   const startLab = async () => {
         const res = await apiPostAsTeam('api/ctf/start', {
             challenge_id: challenge.id
@@ -144,6 +154,9 @@ function ChallengeModal({
         }
     };
   
+    const [StartLabVal, setStartLabVal] = useState(false);
+    const [PortNumber, setPortNumber] = useState(null);
+    const [BtnState, setBtnState] = useState("Start");
 
   useEffect(() => {
     const closeIfClickedOutside = (e) => {
@@ -177,6 +190,9 @@ function ChallengeModal({
                 Author : {challenge.created_by}
               </span>
               <br />
+
+
+
               <br />
               Description:
               <ReactMarkdown
@@ -190,13 +206,26 @@ function ChallengeModal({
                 {/* links added */}
                 {/* dhananjay added above with meetesh */}
               </ReactMarkdown>
-              <div className={styles.ctfLinks}>
+
+
+              {/* ports btn */}
+
+
+
+              <button onClick={tooglePort} className="form-nav-button">{BtnState}</button>
+              {
+                StartLabVal && {PortNumber}
+              }
+
+              <br />
+
+              {/* <div className={styles.ctfLinks}>
                 {challenge.links.map((item) => (
-                  <a href={item.link} style={myStyle}>
+                  <a href={"http://challenges.ports"+item.link} style={myStyle}>
                     {item.name}
                   </a>
                 ))}
-              </div>
+              </div> */}
               {/* <div className={styles.hintSpacing}></div> */}
               Solved by {challenge.solvedBy.length} teams
             </div>
