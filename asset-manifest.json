@@ -1,7 +1,7 @@
 {
   "main.css": "/ctf/static/css/main.072ac42b.chunk.css",
-  "main.js": "/ctf/static/js/main.d960557c.chunk.js",
-  "main.js.map": "/ctf/static/js/main.d960557c.chunk.js.map",
+  "main.js": "/ctf/static/js/main.fd40ff3b.chunk.js",
+  "main.js.map": "/ctf/static/js/main.fd40ff3b.chunk.js.map",
   "static/js/1.52f95982.chunk.js": "/ctf/static/js/1.52f95982.chunk.js",
   "static/js/1.52f95982.chunk.js.map": "/ctf/static/js/1.52f95982.chunk.js.map",
   "runtime~main.js": "/ctf/static/js/runtime~main.06a9c1d0.js",
@@ -13,6 +13,6 @@
   "static/media/ideassion.png": "/ctf/static/media/ideassion.3bdc15a7.png",
   "static/css/main.072ac42b.chunk.css.map": "/ctf/static/css/main.072ac42b.chunk.css.map",
   "index.html": "/ctf/index.html",
-  "precache-manifest.8a9675eea550c0245fe47188b638684d.js": "/ctf/precache-manifest.8a9675eea550c0245fe47188b638684d.js",
+  "precache-manifest.6c01385eefb2392159bc61845d094614.js": "/ctf/precache-manifest.6c01385eefb2392159bc61845d094614.js",
   "service-worker.js": "/ctf/service-worker.js"
 }
