@@ -21,6 +21,9 @@
     justify-content: center;
     width: 80%;
 }
+.text{
+    text-align: center;
+}
 
 .form-field > label {
     text-align: center;

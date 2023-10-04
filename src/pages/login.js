@@ -58,6 +58,7 @@ export default function Login() {
                                 maxLength='128'
                                 onChange={handleChange('user')}
                                 value={loginValues.user}
+                                className='text'
                             />
                         </div>
 
@@ -68,6 +69,7 @@ export default function Login() {
                                 maxLength='128'
                                 onChange={handleChange('name')}
                                 value={loginValues.name}
+                                className='text'
                             />
                         </div>
 
@@ -78,6 +80,7 @@ export default function Login() {
                                 maxLength='16'
                                 onChange={handleChange('password')}
                                 value={loginValues.password}
+                                className='text'
                             />
                         </div>
                         <div className='form-end'>
