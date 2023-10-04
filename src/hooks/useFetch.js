@@ -4,7 +4,7 @@ export default function useFetch() {
     // const apiURL = 'https://backmagic-jirrg.ondigitalocean.app/api';
     // const apiURL = 'http://127.0.0.1:5000/api';
     // const apiURL = 'https://king-prawn-app-o4bg6.ondigitalocean.app/api'
-    const apiURL = 'https://backend.lugvitc.org/api';
+    const apiURL = 'http://backend.lugvitc.org/api';
 
     const api = (path, init) => fetch(apiURL + path, init);
 
