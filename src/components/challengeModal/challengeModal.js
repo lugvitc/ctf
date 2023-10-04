@@ -58,6 +58,10 @@ function ChallengeModal({
     hint3: false,
   });
 
+  const [PortNumber, setPortNumber] = useState(null);
+  const [StartLabVal, setStartLabVal] = useState(false);
+
+
   function inputChangeHandler(event) {
     setInputValue(event.target.value);
   }
