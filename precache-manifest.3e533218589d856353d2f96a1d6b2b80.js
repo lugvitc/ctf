@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "4aeedec517617150d641",
+    "revision": "5e74f685df8c7180acca",
     "url": "/static/css/main.02679f66.chunk.css"
   },
   {
-    "revision": "4aeedec517617150d641",
-    "url": "/static/js/main.4aeedec5.chunk.js"
+    "revision": "5e74f685df8c7180acca",
+    "url": "/static/js/main.5e74f685.chunk.js"
   },
   {
     "revision": "dc56f7a23443534ed7dd",
@@ -36,7 +36,7 @@ self.__precacheManifest = [
     "url": "/static/media/technovit.f568c299.png"
   },
   {
-    "revision": "a2ebcf5d4d3896947438a4d711b100f9",
+    "revision": "5459d4750dad8cd7c2dcd701166ef4ea",
     "url": "/index.html"
   }
 ];
