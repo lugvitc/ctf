@@ -159,12 +159,12 @@ export default function Landing() {
             <section className={styles.section}>
                 <div className={styles.logoRow}>
                     <img className={styles.logo} src={vitLogo} />
-                    <div className={styles.center}>
+                    {/* <div className={styles.center}>
                         <h3 className={styles.sponsors}>SPONSORS</h3>
                         <div>
                             <img className={styles.logo} style={{ width: "200px", height: "auto" }} src={technovitLogo} />
                         </div>
-                    </div>
+                    </div> */}
                     <img className={styles.logo} src={lugLogo} />
 
                 </div>

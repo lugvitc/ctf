@@ -4,8 +4,7 @@ export default function useFetch() {
   // const apiURL = 'https://backmagic-jirrg.ondigitalocean.app/api';
   // const apiURL = 'http://127.0.0.1:5000/api';
   // const apiURL = 'https://king-prawn-app-o4bg6.ondigitalocean.app/api'
-  const apiURL = "http://backend.lugvitc.org/api";
-
+  const apiURL = "https://backend.lugvitc.org/api";
   const api = (path, init) => fetch(apiURL + path, init);
 
   const apiPost = (path, object) =>
@@ -26,12 +25,15 @@ export default function useFetch() {
       },
     });
     const response = res.clone();
-    if (res.status !== 401) {
+    if (res.ok) {
       const data = await res.json();
       if (data && data.access_token)
         window.localStorage.setItem("access-token", data.access_token);
-    } else {
+    } else  if(res.status!==429){
+
       window.localStorage.setItem("access-token", "");
+    }else if(res.status ===401 || res.status ===422 ){
+      window.location = window.location.origin + "/#/login";
     }
     return response;
   };
@@ -50,8 +52,10 @@ export default function useFetch() {
       const data = await res.json();
       if (data && data.access_token)
         window.localStorage.setItem("access-token", data.access_token);
-    } else {
+    } else if(res.status!==429) {
       window.localStorage.setItem("access-token", "");
+    }else if(res.status ===401 || res.status ===422 ){
+      window.location = window.location.origin + "/#/login";
     }
     return response;
   };
@@ -73,8 +77,11 @@ export default function useFetch() {
         delete ans["access_token"];
       }
       return ans;
-    } else {
+    } else  if(res.status!==429){
       window.localStorage.setItem("access-token", "");
+    }
+    else if(res.status ===401 || res.status ===422 ){
+      window.location = window.location.origin + "/#/login";
     }
   };
 

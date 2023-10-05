@@ -5,12 +5,13 @@
 // import ReactMarkdown from "react-markdown";
 // import PopAlert from "../popAlert/popAlert";
 // =======
-import React from 'react';
-import { useState, useEffect } from 'react';
-import styles from './challengeModal.module.css';
-import useFetch from '../../hooks/useFetch';
-import ReactMarkdown from 'react-markdown';
-import PopAlert from '../popAlert/popAlert';
+import React from "react";
+import { useState, useEffect } from "react";
+import styles from "./challengeModal.module.css";
+import useFetch from "../../hooks/useFetch";
+import ReactMarkdown from "react-markdown";
+import PopAlert from "../popAlert/popAlert";
+import toast, { Toaster } from "react-hot-toast";
 
 // >>>>>>> master
 
@@ -58,8 +59,6 @@ function ChallengeModal({
     hint3: false,
   });
 
-
-
   function inputChangeHandler(event) {
     setInputValue(event.target.value);
   }
@@ -93,72 +92,122 @@ function ChallengeModal({
       }
     } catch (error) {
       setLoading(false);
-      return (
-        
-        <ErrorModal error={error.message} open={true} />
-        )
+      return <ErrorModal error={error.message} open={true} />;
     }
   };
 
-  const tooglePort =()=>{
-    if (BtnState=="Start") {
-      startLab()
-      setBtnState("Stop");
-    }
-    else{
+  const tooglePort = () => {
+    if (BtnState == "Start") {
+      startLab();
+      // setBtnState("Stop");
+    } else if (BtnState == "Stop") {
       stopLab();
-      setBtnState("Start");
+      // setBtnState("Start");
+    } else {
+      setBtnState("Loading");
+      loadLab();
     }
-  }
+  };
+
+  const loadLab = () => {
+    toast.error("andha hai kya load ho ra hai");
+  };
 
   const startLab = async () => {
-        const res = await apiPostAsTeam('api/ctf/start', {
-            challenge_id: challenge.id
-        });
-        try {
-            setLoading(true);
-            const data = await res.json();
-            if (data.msg === undefined) {
-                console.log('good!');
-                setPortNumber(data.port);
-                setStartLabVal(true);
-            } else {
-                
-                handleShowAlert();
-                setLoading(false);
-            }
-        } catch {
-            alert('error');
-            setLoading(false);
+    setBtnState("Loading");
+    const res = await apiPostAsTeam("/ctf/start", {
+      challenge_id: challenge.id,
+    });
+    try {
+      let data;
+      try {
+        data = await res.json();
+      } catch (error) {
+        data = {};
+        console.log(error+"line 127");
+      }
+      if (res.status == 200) {
+        if (data.msg === undefined) {
+          console.log("good!");
+          toast.success("Allocated resources");
+          setPortNumber(data.port);
+          setStartLabVal(true);
+          setBtnState("Stop");
+          setLoading(false);
+        } else {
+          toast.success(
+            `Challenge : ${data.name} already started . Close that challenge.`
+          );
+          setBtnState("Start");
+          // setPortNumber("");
+          // setStartLabVal(false);
+          setLoading(false);
         }
-    };
+      } else if (res.status == 422) {
+        toast.error("422 hai !");
+        setBtnState("Start");
+      } else if (res.status == 429) {
+        toast.error("Too many requests , try after 10 seconds !");
+        setBtnState("Start");
+      }
+    } catch (error){
+      console.log(error+"line 154");
+      // alert("error");
+      setBtnState("Start");
+      toast.error("Some error occurred");
 
-    const stopLab = async () => {
-        const res = await apiPostAsTeam('api/ctf/stop', {
-            challenge_id: challenge.id
-        });
-        try {
-            setLoading(true);
-            const data = await res.json();
-            if (data.msg === undefined) {
-                console.log('good!');
-                setPortNumber('');
-                setStartLabVal(false);
-            } else {
-                handleShowAlert();
-                setLoading(false);
-            }
-        } catch {
-            alert('error');
-            setLoading(false);
-        }
-    };
-  
-    const [StartLabVal, setStartLabVal] = useState(false);
-    const [PortNumber, setPortNumber] = useState(null);
-    const [BtnState, setBtnState] = useState("Start");
+      // setLoading(false);
+    }
+  };
+
+  const stopLab = async () => {
+    setBtnState("Loading");
+    const res = await apiPostAsTeam("/ctf/stop", {
+      challenge_id: challenge.id,
+    });
+    try {
+      const data = await res.json();
+      // setLoading(true);
+      if (res.status == 200) {
+        console.log("good!");
+        setPortNumber("");
+        setStartLabVal(false);
+        setBtnState("Start");
+        // setLoading(false);
+        toast.success("Resouces Deallocated");
+      } else if (res.status == 422) {
+        toast.error("Too many requests , try after 10 seconds !");
+        setBtnState("Stop");
+      } else if (res.status == 400) {
+        toast.error(data.msg);
+        setBtnState("Stop");
+      }
+    } catch {
+      setBtnState("Stop");
+      toast.error("Some error occurred");
+      // setLoading(false);
+    }
+  };
+
+  const [StartLabVal, setStartLabVal] = useState(false);
+  const [PortNumber, setPortNumber] = useState(null);
+  const [BtnState, setBtnState] = useState("Start");
 
   useEffect(() => {
+    if (challenge.active == challenge.id) {
+      setBtnState("Stop");
+      setStartLabVal(true);
+      setPortNumber(challenge.active_port);
+    }
+    return () => {};
+  }, []);
+
+  useEffect(() => {
+    // console.log(challenge.active_port);
+    // console.log(typeof(challenge.active_port));
+    // console.log(typeof(challenge.active));
+    // console.log(typeof(challenge.id));
+
     const closeIfClickedOutside = (e) => {
       if (questionModalOpen && e.target === modalRef.current) {
         closeQuestionModal();
@@ -173,6 +222,7 @@ function ChallengeModal({
 
   return (
     <>
+      <Toaster />
       <dialog ref={modalRef} open={false} className={styles.modal}>
         <>
           {isSolved && "done"}
@@ -190,9 +240,6 @@ function ChallengeModal({
                 Author : {challenge.created_by}
               </span>
               <br />
-
-
-
               <br />
               Description:
               <ReactMarkdown
@@ -206,19 +253,12 @@ function ChallengeModal({
                 {/* links added */}
                 {/* dhananjay added above with meetesh */}
               </ReactMarkdown>
-
-
               {/* ports btn */}
-
-
-
-              <button onClick={tooglePort} className="form-nav-button">{BtnState}</button>
-              {
-                StartLabVal && {PortNumber}
-              }
-
+              <button onClick={tooglePort} className="form-nav-button">
+                {BtnState}
+              </button>
+              {StartLabVal && <h3>{PortNumber}</h3>}
               <br />
-
               {/* <div className={styles.ctfLinks}>
                 {challenge.links.map((item) => (
                   <a href={"http://challenges.ports"+item.link} style={myStyle}>
