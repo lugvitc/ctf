@@ -82,7 +82,7 @@ return (
         <h2>Instructions</h2>
         <p>
             The file/link in every challenge hides a flag, which is a string
-            of the format <blockquote className={`${styles.pointer}`}><code className={`${styles.flag}`}>{'passwd{...}'}</code></blockquote> 
+            of the format <blockquote className={`${styles.pointer}`}><code className={`${styles.flag}`}>{'c0d{...}'}</code></blockquote> 
         </p>
         <h2>Challenges</h2>
         <div className={styles.checkboxContainer}>
@@ -112,6 +112,7 @@ return (
                                 }
                                 qWasCorrect={qWasCorrect}
                                 ques_no = {c.id}
+                                
                             />
                         ))
                 ) : (

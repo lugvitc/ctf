@@ -4,7 +4,7 @@ import { NavLink, useLocation, useNavigate } from 'react-router-dom';
 import LoadingAnimation from '../components/loadingAnimation/loadingAnimation';
 import useFetch from '../hooks/useFetch';
 import useTeam from '../hooks/useTeam';
-
+import toast, { Toaster } from 'react-hot-toast';
 export default function Login() {
     const [loginValues, setLoginValues] = useState({
         user: '',
@@ -26,7 +26,8 @@ export default function Login() {
     const submit = async e => {
         e.preventDefault();
         if (!loginValues.name || !loginValues.password) {
-            alert('Please fill out all the fields');
+            // alert('Please fill out all the fields');
+            toast.error("Please fill out all the fields");
         } else {
             setLoading(true);
             const res = await apiPost('/ctf/team-login', loginValues);
@@ -37,13 +38,15 @@ export default function Login() {
                 if (location.pathname === '/login') navigate('/play');
             } else {
                 setLoading(false);
-                window.alert('Invalid Username or Password');
+                toast.error("Invalid Username or Password");
+                // window.alert('Invalid Username or Password');
             }
         }
     };
 
     return (
         <>
+            <Toaster/>
             {loading ? (
                 <LoadingAnimation />
             ) : (

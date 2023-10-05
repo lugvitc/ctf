@@ -1,7 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-
+import toast, { Toaster } from 'react-hot-toast';
 import useFetch from '../../hooks/useFetch';
 
 import styles from './signup.module.css';
@@ -78,10 +78,12 @@ export default function Signup() {
             ) {
                 const res = await apiPost('/ctf/create-team', teamValues);
                 if (res.ok) {
+                    toast.success("Team Created Successfully")
                     navigate('/login');
                 }
             } else {
-                alert('team name already taken');
+                toast.error("Team name already taken !")
+                // alert('team name already taken');
             }
         }
     };
