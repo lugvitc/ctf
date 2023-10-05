@@ -5,7 +5,16 @@
     overflow-y: scroll; */
     font-size: x-large;
     overflow-wrap: break-word;
+    background: url("/_next/static/media/bg-profile.3feb8725.svg") right top / 400% no-repeat;
+    /* background-color: #110713; */
+     /* background-color: #0A0A0A;
+background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='267' height='267' viewBox='0 0 800 800'%3E%3Cg fill='none' stroke='%23232323' stroke-width='1'%3E%3Cpath d='M769 229L1037 260.9M927 880L731 737 520 660 309 538 40 599 295 764 126.5 879.5 40 599-197 493 102 382-31 229 126.5 79.5-69-63'/%3E%3Cpath d='M-31 229L237 261 390 382 603 493 308.5 537.5 101.5 381.5M370 905L295 764'/%3E%3Cpath d='M520 660L578 842 731 737 840 599 603 493 520 660 295 764 309 538 390 382 539 269 769 229 577.5 41.5 370 105 295 -36 126.5 79.5 237 261 102 382 40 599 -69 737 127 880'/%3E%3Cpath d='M520-140L578.5 42.5 731-63M603 493L539 269 237 261 370 105M902 382L539 269M390 382L102 382'/%3E%3Cpath d='M-222 42L126.5 79.5 370 105 539 269 577.5 41.5 927 80 769 229 902 382 603 493 731 737M295-36L577.5 41.5M578 842L295 764M40-201L127 80M102 382L-261 269'/%3E%3C/g%3E%3Cg fill='%23223642'%3E%3Ccircle cx='769' cy='229' r='5'/%3E%3Ccircle cx='539' cy='269' r='5'/%3E%3Ccircle cx='603' cy='493' r='5'/%3E%3Ccircle cx='731' cy='737' r='5'/%3E%3Ccircle cx='520' cy='660' r='5'/%3E%3Ccircle cx='309' cy='538' r='5'/%3E%3Ccircle cx='295' cy='764' r='5'/%3E%3Ccircle cx='40' cy='599' r='5'/%3E%3Ccircle cx='102' cy='382' r='5'/%3E%3Ccircle cx='127' cy='80' r='5'/%3E%3Ccircle cx='370' cy='105' r='5'/%3E%3Ccircle cx='578' cy='42' r='5'/%3E%3Ccircle cx='237' cy='261' r='5'/%3E%3Ccircle cx='390' cy='382' r='5'/%3E%3C/g%3E%3C/svg%3E");  */
 
+/* background: url(https://i.pinimg.com/originals/10/69/a7/1069a7113c399a9a9ca3185769c59134.gif);
+background: url(https://cdn.svgator.com/images/2022/06/use-svg-as-background-image-particle-strokes.svg); */
+/* background: url(https://d33wubrfki0l68.cloudfront.net/3697f8a424a77e6e5b422007590aedb27abca140/2cad2/static/constellations-4eee0ff82aba4d347fc46bb276834140.jpg); */
+/* background-repeat: no-repeat;
+background-size: cover; */
 }
 
 .section {
@@ -13,7 +22,8 @@
     flex-direction: column;
     /* justify-content: center; */
     align-items: center;
-    font-family: var(--fonth);
+    /* font-family: var(--fonth); */
+    font-family: 'Press Start 2P', cursive;
     /* scroll-snap-align: start; */
 }
 
@@ -42,6 +52,7 @@
     color: var(--nord12);
     font-size: 20px;
     font-family: var(--fonth);
+    font-family: 'Press Start 2P', cursive;
     letter-spacing: 8px;
 }
 .title {
@@ -65,7 +76,8 @@
 .qr{
     margin-top: 20px;
     height: 8em;
-    border-radius: var(--nord17);
+    /* border-radius: var(--nord17); */
+    border-radius:12px;
 }
 .infoCards {
     
@@ -74,10 +86,13 @@
     justify-content: space-evenly;
     flex-direction: row;
     flex: 1;
+    border-radius: 12px ;
     padding-block: 1rem;
+    font-family: 'Press Start 2P', cursive;
 }
 
 .infoCards > * {
+    border-radius: 12px;
     width: 275px;
     align-items: center;
     padding: 2rem;
@@ -85,14 +100,20 @@
     display: grid;
     place-items: center;
     font-family: var(--fonth);
+    font-family: 'Press Start 2P', cursive;
+    font-size: large;
 }
 
 .infoCards > *:nth-child(2n + 1) {
-    background-color: var(--nord2);
+    /* background-color: var(--nord2); */
+    background-color: #051F22;
+    border-radius: 12px;
 }
 
 .infoCards > *:nth-child(2n) {
-    background-color: var(--nord2);
+    /* background-color: var(--nord2); */
+    background-color: #051F22;
+    border-radius: 12px;
 }
 
 .infoCards > *:first-child {
@@ -111,38 +132,45 @@
 .dl {
     padding-inline: 1rem;
     width: calc(100% - 2rem);
-/* <<<<<<< consistent-styling-rounded
-    border-radius: var(--nord16);
-    
-======= */
     font-family: var(--fonth);
-/* >>>>>>> master */
+    /* font-family: 'Press Start 2P', cursive; */
+    border-radius: 12px;
 }
 .dl li{
     list-style-position: outside;
     text-indent: -1.5em;
     padding-left: 1.5em;
+    
 /* <<<<<<< consistent-styling-rounded
     border-radius: var(--noed16);
 ======= */
     font-family: var(--fontc);
+    /* font-family: 'Press Start 2P', cursive; */
+    /* font-size: 12px; */
 /* >>>>>>> master */
+border-radius: 12px;
+
     
 }
 .dl > dt {
     width: fit-content;
-    background-color: var(--nord2);
-    border-radius: var(--nord18);
-    
+    /* background-color: var(--nord2); */
+    background-color: #051F22;
+    /* border-radius: var(--nord18); */
+    border-radius: 12px;
+
     margin-bottom: 1rem;
     padding: 1rem;
 }
 
 .dl > dd {
-    background-color: var(--nord1);
+    /* background-color: var(--nord1); */
+    background-color: #051F22;
     margin-bottom: 2rem;
     padding: 1rem;
-    border-radius: var(--nord16);
+    /* border-radius: var(--nord16); */
+    border-radius: 12px;
+
     
 }
 

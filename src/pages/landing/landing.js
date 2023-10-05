@@ -173,7 +173,7 @@ export default function Landing() {
                 <h1 className={styles.title}>{info.Event}</h1>
                 <div className={styles.tagline}>{info.Subtitle}</div>
                 <div className={styles.infoCards}>
-                    <div>
+                    <div >
                         <div>{info.Location}</div>
                         <div>
                             {info.Dates}
