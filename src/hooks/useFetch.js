@@ -29,10 +29,8 @@ export default function useFetch() {
       const data = await res.json();
       if (data && data.access_token)
         window.localStorage.setItem("access-token", data.access_token);
-    } else  if(res.status!==429){
-
+    } else if(res.status!==429 && (res.status ===401 || res.status ===422)){
       window.localStorage.setItem("access-token", "");
-    }else if(res.status ===401 || res.status ===422 ){
       window.location = window.location.origin + "/#/login";
     }
     return response;
@@ -52,9 +50,8 @@ export default function useFetch() {
       const data = await res.json();
       if (data && data.access_token)
         window.localStorage.setItem("access-token", data.access_token);
-    } else if(res.status!==429) {
+    } else if(res.status!==429 && (res.status ===401 || res.status ===422)){
       window.localStorage.setItem("access-token", "");
-    }else if(res.status ===401 || res.status ===422 ){
       window.location = window.location.origin + "/#/login";
     }
     return response;
@@ -77,10 +74,8 @@ export default function useFetch() {
         delete ans["access_token"];
       }
       return ans;
-    } else  if(res.status!==429){
+    } else if(res.status!==429 && (res.status ===401 || res.status ===422)){
       window.localStorage.setItem("access-token", "");
-    }
-    else if(res.status ===401 || res.status ===422 ){
       window.location = window.location.origin + "/#/login";
     }
   };
