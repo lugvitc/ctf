@@ -5,6 +5,7 @@ import LoadingAnimation from '../components/loadingAnimation/loadingAnimation';
 import useFetch from '../hooks/useFetch';
 import useTeam from '../hooks/useTeam';
 import toast, { Toaster } from 'react-hot-toast';
+
 export default function Login() {
     const [loginValues, setLoginValues] = useState({
         user: '',

@@ -76,7 +76,7 @@ return (
 
 
 
-    <div className="playTime">
+    <div className={styles.playTime}>
 
         <h1 className={`${styles.playTimePlay}`}>Play</h1>
         <h2>Instructions</h2>
