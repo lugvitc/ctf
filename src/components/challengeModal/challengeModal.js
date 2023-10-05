@@ -130,7 +130,7 @@ function ChallengeModal({
         if (data.msg === undefined) {
           console.log("good!");
           toast.success("Allocated resources");
-          setPortNumber(data.port);
+          setPortNumber("http://ctf.lugvitc.org/"+data.port);
           setStartLabVal(true);
           setBtnState("Stop");
           setLoading(false);
